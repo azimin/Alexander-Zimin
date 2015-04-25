@@ -35,6 +35,8 @@
 		923F4F251AEC4D0000C497E2 /* PlainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F241AEC4D0000C497E2 /* PlainTableViewCell.swift */; };
 		923F4F271AEC4D4700C497E2 /* PlainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F261AEC4D4700C497E2 /* PlainTableViewCell.xib */; };
 		923F4F2A1AEC526A00C497E2 /* TechnicalSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */; };
+		923F4F2C1AEC53CE00C497E2 /* TechnicalSkills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */; };
+		923F4F2E1AEC546400C497E2 /* TechnicalSkillsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		923F4F241AEC4D0000C497E2 /* PlainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainTableViewCell.swift; sourceTree = "<group>"; };
 		923F4F261AEC4D4700C497E2 /* PlainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlainTableViewCell.xib; sourceTree = "<group>"; };
 		923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsViewController.swift; sourceTree = "<group>"; };
+		923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TechnicalSkills.plist; sourceTree = "<group>"; };
+		923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				923F4EEE1AEBACC600C497E2 /* Projects */,
 				923F4F1C1AEC42E400C497E2 /* Education */,
 				923F4F281AEC525000C497E2 /* TechnicalSkills */,
+				923F4F2F1AEC600400C497E2 /* Interests */,
 			);
 			name = "ViewController+Cells";
 			path = "ViewController+Cell";
@@ -247,6 +252,7 @@
 			children = (
 				923F4F011AEBF3E100C497E2 /* Projects.plist */,
 				923F4F101AEC3F4900C497E2 /* Education.plist */,
+				923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			children = (
 				923F4F211AEC464900C497E2 /* EducationParser.swift */,
 				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
+				923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */,
 				923F4F1F1AEC459000C497E2 /* InfoItem.swift */,
 			);
 			path = Model;
@@ -300,6 +307,13 @@
 				923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */,
 			);
 			name = TechnicalSkills;
+			sourceTree = "<group>";
+		};
+		923F4F2F1AEC600400C497E2 /* Interests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +377,7 @@
 				923F4F191AEC40E700C497E2 /* InfoTableViewCell.xib in Resources */,
 				923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */,
 				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
+				923F4F2C1AEC53CE00C497E2 /* TechnicalSkills.plist in Resources */,
 				923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */,
 				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
 				923F4F271AEC4D4700C497E2 /* PlainTableViewCell.xib in Resources */,
@@ -376,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923F4F2E1AEC546400C497E2 /* TechnicalSkillsParser.swift in Sources */,
 				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
 				923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */,
 				923F4F251AEC4D0000C497E2 /* PlainTableViewCell.swift in Sources */,

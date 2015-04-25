@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>iOS Development</string>
+		<key>acquired</key>
+		<string>A lot of books, stanford lectures and 
+practice</string>
+		<key>skills</key>
+		<array>
+			<string>TDD</string>
+			<string>OOD</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>iOS Development</string>
+		<key>acquired</key>
+		<string>A lot of books, stanford lectures and 
+practice</string>
+		<key>skills</key>
+		<array>
+			<string>TDD</string>
+			<string>OOD</string>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -15,14 +15,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv_accessorize_small" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-GY-lrZ">
-                        <rect key="frame" x="563" y="35" width="11" height="20"/>
+                        <rect key="frame" x="555" y="35" width="11" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="b7a-2L-xnZ"/>
                             <constraint firstAttribute="width" constant="11" id="wZw-G3-26E"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBE-Ni-2jw">
-                        <rect key="frame" x="16" y="16" width="539" height="58"/>
+                        <rect key="frame" x="16" y="16" width="531" height="58"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="23" id="0dQ-SM-MmZ"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qF9-8B-krr"/>
@@ -39,7 +39,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="5Wb-GY-lrZ" secondAttribute="trailing" constant="8" id="BP3-7d-DKZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5Wb-GY-lrZ" secondAttribute="trailing" constant="16" id="BP3-7d-DKZ"/>
                     <constraint firstItem="YBE-Ni-2jw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="FJn-tF-0k0"/>
                     <constraint firstAttribute="centerY" secondItem="5Wb-GY-lrZ" secondAttribute="centerY" id="JmZ-zI-10N"/>
                     <constraint firstItem="5Wb-GY-lrZ" firstAttribute="leading" secondItem="YBE-Ni-2jw" secondAttribute="trailing" constant="8" id="YGI-ZR-gM5"/>

@@ -34,9 +34,11 @@ class PlainTableViewCell: RoundedTableViewCell {
             if selectionEnable {
                 accessorizeRightConstraint.constant = 8
                 accessorizeWidthConstraint.constant = 11
+                nameLabel.font = UIFont.appMediumFont()
             } else {
                 accessorizeRightConstraint.constant = 0
                 accessorizeWidthConstraint.constant = 0
+                nameLabel.font = UIFont.appRegularFont()
             }
         }
     }
@@ -44,12 +46,18 @@ class PlainTableViewCell: RoundedTableViewCell {
     private(set) var opened: Bool = false
     
     func setOpened(opened: Bool, animated: Bool) {
+        setOpened(opened, animated: animated, complition: nil)
+    }
+    
+    func setOpened(opened: Bool, animated: Bool, complition: (()->())?) {
         self.opened = opened
         let duration = animated ? 0.25 : 0.0
         
         UIView.animateWithDuration(duration, animations: { () -> Void in
             self.rotateAction(opened)
-        })
+        }) { (success) -> Void in
+            complition?()
+        }
     }
     
     private func rotateAction(opened: Bool) {
