@@ -2,22 +2,24 @@
 //  MainViewController.swift
 //  Alexander Zimin
 //
-//  Created by Alex Zimin on 21/04/15.
+//  Created by Alex Zimin on 25/04/15.
 //  Copyright (c) 2015 Alex Zimin. All rights reserved.
 //
 
 import UIKit
 
 class MainViewController: BaseViewController {
-   
+
     @IBOutlet weak var tableView: UITableView!
     var items = ["Working projects", "Education", "Technical Skills", "Interests"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-    
 }
+
 
 extension MainViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +37,7 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier("WorkingProjects", sender: nil)
     }
 }

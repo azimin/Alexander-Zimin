@@ -2,27 +2,30 @@
 //  ProjectsViewController.swift
 //  Alexander Zimin
 //
-//  Created by Alex Zimin on 21/04/15.
+//  Created by Alex Zimin on 25/04/15.
 //  Copyright (c) 2015 Alex Zimin. All rights reserved.
 //
 
 import UIKit
 
 class ProjectsViewController: BaseViewController {
-    
+
+    @IBOutlet var tableView: UITableView!
     var projects: [String] = ["Alex", "Alex", "Swag"]
-    @IBOutlet weak var tableView: UITableView!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.reloadData()
         
         tableView.estimatedRowHeight = 85
         tableView.rowHeight = UITableViewAutomaticDimension
+
+        // Do any additional setup after loading the view.
     }
     
 }
+
 
 // MARK: - Constants
 

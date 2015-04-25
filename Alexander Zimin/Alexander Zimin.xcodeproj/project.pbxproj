@@ -7,39 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		920F6D4C1AE4565600E39AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920F6D4B1AE4565600E39AFA /* AppDelegate.swift */; };
-		920F6D511AE4565600E39AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920F6D4F1AE4565600E39AFA /* Main.storyboard */; };
-		920F6D531AE4565600E39AFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920F6D521AE4565600E39AFA /* Images.xcassets */; };
-		920F6D561AE4565600E39AFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920F6D541AE4565600E39AFA /* LaunchScreen.xib */; };
-		9225CE5F1AE6AFF100DA5F38 /* Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225CE5E1AE6AFF100DA5F38 /* Apperance.swift */; };
-		9225CE611AE6B4E200DA5F38 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225CE601AE6B4E200DA5F38 /* Color.swift */; };
-		9225CE681AE6BBCA00DA5F38 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225CE671AE6BBCA00DA5F38 /* ProjectTableViewCell.swift */; };
-		9260EC2D1AE6642000B9E992 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260EC2C1AE6642000B9E992 /* BaseViewController.swift */; };
-		9260EC2F1AE6644500B9E992 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260EC2E1AE6644500B9E992 /* MainViewController.swift */; };
-		9260EC311AE66A2B00B9E992 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260EC301AE66A2B00B9E992 /* ProjectsViewController.swift */; };
-		9260EC331AE66A3500B9E992 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260EC321AE66A3500B9E992 /* ProjectViewController.swift */; };
-		92AFED3C1AE6AEC200F2248A /* RoundedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AFED3B1AE6AEC200F2248A /* RoundedTableViewCell.swift */; };
+		923F4EC11AEBAB7200C497E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */; };
+		923F4EC61AEBAB7200C497E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC41AEBAB7200C497E2 /* Main.storyboard */; };
+		923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC71AEBAB7200C497E2 /* Images.xcassets */; };
+		923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */; };
+		923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */; };
+		923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EEC1AEBACC100C497E2 /* MainViewController.swift */; };
+		923F4EF21AEBAF3C00C497E2 /* RoundedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */; };
+		923F4EF41AEBAF5800C497E2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF31AEBAF5800C497E2 /* Color.swift */; };
+		923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF51AEBAF6D00C497E2 /* Apperance.swift */; };
+		923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */; };
+		923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		920F6D461AE4565600E39AFA /* Alexander Zimin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alexander Zimin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		920F6D4A1AE4565600E39AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		920F6D4B1AE4565600E39AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		920F6D501AE4565600E39AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		920F6D521AE4565600E39AFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		920F6D551AE4565600E39AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9225CE5E1AE6AFF100DA5F38 /* Apperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apperance.swift; sourceTree = "<group>"; };
-		9225CE601AE6B4E200DA5F38 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		9225CE671AE6BBCA00DA5F38 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
-		9260EC2C1AE6642000B9E992 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9260EC2E1AE6644500B9E992 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9260EC301AE66A2B00B9E992 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
-		9260EC321AE66A3500B9E992 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		92AFED3B1AE6AEC200F2248A /* RoundedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTableViewCell.swift; sourceTree = "<group>"; };
+		923F4EBB1AEBAB7200C497E2 /* Alexander Zimin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alexander Zimin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		923F4EBF1AEBAB7200C497E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		923F4EC51AEBAB7200C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		923F4EC71AEBAB7200C497E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		923F4ECA1AEBAB7200C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		923F4EEC1AEBACC100C497E2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTableViewCell.swift; sourceTree = "<group>"; };
+		923F4EF31AEBAF5800C497E2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		923F4EF51AEBAF6D00C497E2 /* Apperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apperance.swift; sourceTree = "<group>"; };
+		923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		920F6D431AE4565600E39AFA /* Frameworks */ = {
+		923F4EB81AEBAB7200C497E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,164 +47,163 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		920F6D3D1AE4565600E39AFA = {
+		923F4EB21AEBAB7200C497E2 = {
 			isa = PBXGroup;
 			children = (
-				920F6D481AE4565600E39AFA /* Alexander Zimin */,
-				920F6D471AE4565600E39AFA /* Products */,
+				923F4EBD1AEBAB7200C497E2 /* Alexander Zimin */,
+				923F4EBC1AEBAB7200C497E2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		920F6D471AE4565600E39AFA /* Products */ = {
+		923F4EBC1AEBAB7200C497E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				920F6D461AE4565600E39AFA /* Alexander Zimin.app */,
+				923F4EBB1AEBAB7200C497E2 /* Alexander Zimin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		920F6D481AE4565600E39AFA /* Alexander Zimin */ = {
+		923F4EBD1AEBAB7200C497E2 /* Alexander Zimin */ = {
 			isa = PBXGroup;
 			children = (
-				920F6D4F1AE4565600E39AFA /* Main.storyboard */,
-				920F6D6C1AE4569700E39AFA /* Sources */,
-				920F6D6B1AE4568100E39AFA /* Resources */,
+				923F4EC41AEBAB7200C497E2 /* Main.storyboard */,
+				923F4EE01AEBAB9C00C497E2 /* Source */,
+				923F4EEB1AEBAC6000C497E2 /* Resources */,
 			);
 			path = "Alexander Zimin";
 			sourceTree = "<group>";
 		};
-		920F6D491AE4565600E39AFA /* Supporting Files */ = {
+		923F4EBE1AEBAB7200C497E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				920F6D4A1AE4565600E39AFA /* Info.plist */,
+				923F4EBF1AEBAB7200C497E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		920F6D6B1AE4568100E39AFA /* Resources */ = {
+		923F4EE01AEBAB9C00C497E2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				920F6D521AE4565600E39AFA /* Images.xcassets */,
-				920F6D541AE4565600E39AFA /* LaunchScreen.xib */,
+				923F4EBE1AEBAB7200C497E2 /* Supporting Files */,
+				923F4EE21AEBABB200C497E2 /* Common */,
+				923F4EE51AEBABD100C497E2 /* Core */,
+				923F4EE91AEBAC1400C497E2 /* ViewController+Cell */,
+				923F4EEA1AEBAC4700C497E2 /* View */,
 			);
-			name = Resources;
+			name = Source;
 			sourceTree = "<group>";
 		};
-		920F6D6C1AE4569700E39AFA /* Sources */ = {
+		923F4EE21AEBABB200C497E2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				920F6D491AE4565600E39AFA /* Supporting Files */,
-				9225CE5B1AE6AFA500DA5F38 /* Common */,
-				920F6D6D1AE456A000E39AFA /* Core */,
-				920F6D6E1AE456A400E39AFA /* ViewControllers+Cells */,
-				92AFED391AE6AE8E00F2248A /* View */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		920F6D6D1AE456A000E39AFA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				92AFED3A1AE6AE9800F2248A /* Base */,
-				920F6D4B1AE4565600E39AFA /* AppDelegate.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		920F6D6E1AE456A400E39AFA /* ViewControllers+Cells */ = {
-			isa = PBXGroup;
-			children = (
-				9260EC2E1AE6644500B9E992 /* MainViewController.swift */,
-				9260EC341AE66A3A00B9E992 /* Projects */,
-			);
-			name = "ViewControllers+Cells";
-			sourceTree = "<group>";
-		};
-		9225CE5B1AE6AFA500DA5F38 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				9225CE5C1AE6AFAC00DA5F38 /* Classes */,
-				9225CE5D1AE6AFB100DA5F38 /* Extensions */,
+				923F4EE31AEBABC000C497E2 /* Classes */,
+				923F4EE41AEBABC400C497E2 /* Extensions */,
 			);
 			name = Common;
 			sourceTree = "<group>";
 		};
-		9225CE5C1AE6AFAC00DA5F38 /* Classes */ = {
+		923F4EE31AEBABC000C497E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9225CE5E1AE6AFF100DA5F38 /* Apperance.swift */,
+				923F4EF51AEBAF6D00C497E2 /* Apperance.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		9225CE5D1AE6AFB100DA5F38 /* Extensions */ = {
+		923F4EE41AEBABC400C497E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9225CE601AE6B4E200DA5F38 /* Color.swift */,
+				923F4EF31AEBAF5800C497E2 /* Color.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		9225CE621AE6BA0B00DA5F38 /* Projects */ = {
+		923F4EE51AEBABD100C497E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9225CE641AE6BA6700DA5F38 /* Cells */,
-				9260EC301AE66A2B00B9E992 /* ProjectsViewController.swift */,
+				923F4EE61AEBABE700C497E2 /* Base */,
+				923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */,
 			);
-			name = Projects;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		9225CE631AE6BA5D00DA5F38 /* Project */ = {
+		923F4EE61AEBABE700C497E2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				9260EC321AE66A3500B9E992 /* ProjectViewController.swift */,
+				923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */,
 			);
-			name = Project;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		9225CE641AE6BA6700DA5F38 /* Cells */ = {
+		923F4EE91AEBAC1400C497E2 /* ViewController+Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9225CE671AE6BBCA00DA5F38 /* ProjectTableViewCell.swift */,
+				923F4EEC1AEBACC100C497E2 /* MainViewController.swift */,
+				923F4EEE1AEBACC600C497E2 /* Projects */,
 			);
-			name = Cells;
+			name = "ViewController+Cell";
 			sourceTree = "<group>";
 		};
-		9260EC341AE66A3A00B9E992 /* Projects */ = {
+		923F4EEA1AEBAC4700C497E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9225CE621AE6BA0B00DA5F38 /* Projects */,
-				9225CE631AE6BA5D00DA5F38 /* Project */,
-			);
-			name = Projects;
-			sourceTree = "<group>";
-		};
-		92AFED391AE6AE8E00F2248A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				92AFED3B1AE6AEC200F2248A /* RoundedTableViewCell.swift */,
+				923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		92AFED3A1AE6AE9800F2248A /* Base */ = {
+		923F4EEB1AEBAC6000C497E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9260EC2C1AE6642000B9E992 /* BaseViewController.swift */,
+				923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */,
+				923F4EC71AEBAB7200C497E2 /* Images.xcassets */,
 			);
-			name = Base;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		923F4EEE1AEBACC600C497E2 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				923F4EEF1AEBACD000C497E2 /* Projects */,
+				923F4EF01AEBACD600C497E2 /* Project */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		923F4EEF1AEBACD000C497E2 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				923F4EF91AEBB58B00C497E2 /* Cells */,
+				923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		923F4EF01AEBACD600C497E2 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		923F4EF91AEBB58B00C497E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		920F6D451AE4565600E39AFA /* Alexander Zimin */ = {
+		923F4EBA1AEBAB7200C497E2 /* Alexander Zimin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 920F6D651AE4565600E39AFA /* Build configuration list for PBXNativeTarget "Alexander Zimin" */;
+			buildConfigurationList = 923F4EDA1AEBAB7200C497E2 /* Build configuration list for PBXNativeTarget "Alexander Zimin" */;
 			buildPhases = (
-				920F6D421AE4565600E39AFA /* Sources */,
-				920F6D431AE4565600E39AFA /* Frameworks */,
-				920F6D441AE4565600E39AFA /* Resources */,
+				923F4EB71AEBAB7200C497E2 /* Sources */,
+				923F4EB81AEBAB7200C497E2 /* Frameworks */,
+				923F4EB91AEBAB7200C497E2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -214,24 +211,24 @@
 			);
 			name = "Alexander Zimin";
 			productName = "Alexander Zimin";
-			productReference = 920F6D461AE4565600E39AFA /* Alexander Zimin.app */;
+			productReference = 923F4EBB1AEBAB7200C497E2 /* Alexander Zimin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		920F6D3E1AE4565600E39AFA /* Project object */ = {
+		923F4EB31AEBAB7200C497E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Alex Zimin";
 				TargetAttributes = {
-					920F6D451AE4565600E39AFA = {
-						CreatedOnToolsVersion = 6.3;
+					923F4EBA1AEBAB7200C497E2 = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 920F6D411AE4565600E39AFA /* Build configuration list for PBXProject "Alexander Zimin" */;
+			buildConfigurationList = 923F4EB61AEBAB7200C497E2 /* Build configuration list for PBXProject "Alexander Zimin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,61 +236,60 @@
 				en,
 				Base,
 			);
-			mainGroup = 920F6D3D1AE4565600E39AFA;
-			productRefGroup = 920F6D471AE4565600E39AFA /* Products */;
+			mainGroup = 923F4EB21AEBAB7200C497E2;
+			productRefGroup = 923F4EBC1AEBAB7200C497E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				920F6D451AE4565600E39AFA /* Alexander Zimin */,
+				923F4EBA1AEBAB7200C497E2 /* Alexander Zimin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		920F6D441AE4565600E39AFA /* Resources */ = {
+		923F4EB91AEBAB7200C497E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920F6D511AE4565600E39AFA /* Main.storyboard in Resources */,
-				920F6D561AE4565600E39AFA /* LaunchScreen.xib in Resources */,
-				920F6D531AE4565600E39AFA /* Images.xcassets in Resources */,
+				923F4EC61AEBAB7200C497E2 /* Main.storyboard in Resources */,
+				923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */,
+				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		920F6D421AE4565600E39AFA /* Sources */ = {
+		923F4EB71AEBAB7200C497E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9260EC331AE66A3500B9E992 /* ProjectViewController.swift in Sources */,
-				9225CE681AE6BBCA00DA5F38 /* ProjectTableViewCell.swift in Sources */,
-				9260EC311AE66A2B00B9E992 /* ProjectsViewController.swift in Sources */,
-				9260EC2F1AE6644500B9E992 /* MainViewController.swift in Sources */,
-				920F6D4C1AE4565600E39AFA /* AppDelegate.swift in Sources */,
-				9225CE5F1AE6AFF100DA5F38 /* Apperance.swift in Sources */,
-				9225CE611AE6B4E200DA5F38 /* Color.swift in Sources */,
-				9260EC2D1AE6642000B9E992 /* BaseViewController.swift in Sources */,
-				92AFED3C1AE6AEC200F2248A /* RoundedTableViewCell.swift in Sources */,
+				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
+				923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */,
+				923F4EF21AEBAF3C00C497E2 /* RoundedTableViewCell.swift in Sources */,
+				923F4EC11AEBAB7200C497E2 /* AppDelegate.swift in Sources */,
+				923F4EF41AEBAF5800C497E2 /* Color.swift in Sources */,
+				923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */,
+				923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */,
+				923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		920F6D4F1AE4565600E39AFA /* Main.storyboard */ = {
+		923F4EC41AEBAB7200C497E2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				920F6D501AE4565600E39AFA /* Base */,
+				923F4EC51AEBAB7200C497E2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		920F6D541AE4565600E39AFA /* LaunchScreen.xib */ = {
+		923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				920F6D551AE4565600E39AFA /* Base */,
+				923F4ECA1AEBAB7200C497E2 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -301,7 +297,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		920F6D631AE4565600E39AFA /* Debug */ = {
+		923F4ED81AEBAB7200C497E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -345,7 +341,7 @@
 			};
 			name = Debug;
 		};
-		920F6D641AE4565600E39AFA /* Release */ = {
+		923F4ED91AEBAB7200C497E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -382,7 +378,7 @@
 			};
 			name = Release;
 		};
-		920F6D661AE4565600E39AFA /* Debug */ = {
+		923F4EDB1AEBAB7200C497E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -392,7 +388,7 @@
 			};
 			name = Debug;
 		};
-		920F6D671AE4565600E39AFA /* Release */ = {
+		923F4EDC1AEBAB7200C497E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -405,25 +401,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		920F6D411AE4565600E39AFA /* Build configuration list for PBXProject "Alexander Zimin" */ = {
+		923F4EB61AEBAB7200C497E2 /* Build configuration list for PBXProject "Alexander Zimin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				920F6D631AE4565600E39AFA /* Debug */,
-				920F6D641AE4565600E39AFA /* Release */,
+				923F4ED81AEBAB7200C497E2 /* Debug */,
+				923F4ED91AEBAB7200C497E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		920F6D651AE4565600E39AFA /* Build configuration list for PBXNativeTarget "Alexander Zimin" */ = {
+		923F4EDA1AEBAB7200C497E2 /* Build configuration list for PBXNativeTarget "Alexander Zimin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				920F6D661AE4565600E39AFA /* Debug */,
-				920F6D671AE4565600E39AFA /* Release */,
+				923F4EDB1AEBAB7200C497E2 /* Debug */,
+				923F4EDC1AEBAB7200C497E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 920F6D3E1AE4565600E39AFA /* Project object */;
+	rootObject = 923F4EB31AEBAB7200C497E2 /* Project object */;
 }
