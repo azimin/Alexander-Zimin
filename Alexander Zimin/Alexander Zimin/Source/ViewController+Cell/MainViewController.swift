@@ -42,7 +42,7 @@ extension MainViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             performSegueWithIdentifier("WorkingProjects", sender: nil)
         } else {
-            performSegueWithIdentifier("WorkingProjects", sender: nil)
+            performSegueWithIdentifier("Education", sender: nil)
         }
         
     }

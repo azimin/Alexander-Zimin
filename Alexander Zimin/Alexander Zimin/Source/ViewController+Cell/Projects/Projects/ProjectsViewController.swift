@@ -18,11 +18,9 @@ class ProjectsViewController: BaseViewController {
         
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
     }
-    
 }
-
 
 // MARK: - Constants
 

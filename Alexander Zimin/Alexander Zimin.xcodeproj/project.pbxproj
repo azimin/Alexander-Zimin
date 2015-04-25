@@ -24,9 +24,17 @@
 		923F4F081AEC05CC00C497E2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */; };
 		923F4F0A1AEC06F500C497E2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F091AEC06F500C497E2 /* Image.swift */; };
 		923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */; };
-		923F4F0F1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */; };
+		923F4F0F1AEC0C3200C497E2 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0E1AEC0C3200C497E2 /* InfoTableViewCell.swift */; };
 		923F4F111AEC3F4900C497E2 /* Education.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F101AEC3F4900C497E2 /* Education.plist */; };
 		923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F121AEC3F8400C497E2 /* Main.storyboard */; };
+		923F4F191AEC40E700C497E2 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F171AEC40E700C497E2 /* InfoTableViewCell.xib */; };
+		923F4F1B1AEC423600C497E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F1A1AEC423600C497E2 /* Constants.swift */; };
+		923F4F1E1AEC436100C497E2 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F1D1AEC436100C497E2 /* EducationViewController.swift */; };
+		923F4F201AEC459000C497E2 /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F1F1AEC459000C497E2 /* InfoItem.swift */; };
+		923F4F221AEC464900C497E2 /* EducationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F211AEC464900C497E2 /* EducationParser.swift */; };
+		923F4F251AEC4D0000C497E2 /* PlainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F241AEC4D0000C497E2 /* PlainTableViewCell.swift */; };
+		923F4F271AEC4D4700C497E2 /* PlainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F261AEC4D4700C497E2 /* PlainTableViewCell.xib */; };
+		923F4F2A1AEC526A00C497E2 /* TechnicalSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +57,17 @@
 		923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		923F4F091AEC06F500C497E2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoTableViewCell.swift; sourceTree = "<group>"; };
+		923F4F0E1AEC0C3200C497E2 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoTableViewCell.swift; path = "Alexander Zimin/Source/ViewController+Cell/Projects/Project/Cells/InfoTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		923F4F101AEC3F4900C497E2 /* Education.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Education.plist; sourceTree = "<group>"; };
 		923F4F131AEC3F8400C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		923F4F171AEC40E700C497E2 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		923F4F1A1AEC423600C497E2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		923F4F1D1AEC436100C497E2 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		923F4F1F1AEC459000C497E2 /* InfoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
+		923F4F211AEC464900C497E2 /* EducationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationParser.swift; sourceTree = "<group>"; };
+		923F4F241AEC4D0000C497E2 /* PlainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainTableViewCell.swift; sourceTree = "<group>"; };
+		923F4F261AEC4D4700C497E2 /* PlainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlainTableViewCell.xib; sourceTree = "<group>"; };
+		923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +122,7 @@
 				923F4EE21AEBABB200C497E2 /* Common */,
 				923F4EE51AEBABD100C497E2 /* Core */,
 				923F4F031AEBF56B00C497E2 /* Model */,
-				923F4EE91AEBAC1400C497E2 /* ViewController+Cell */,
+				923F4EE91AEBAC1400C497E2 /* ViewController+Cells */,
 				923F4EEA1AEBAC4700C497E2 /* View */,
 			);
 			path = Source;
@@ -125,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				923F4EF51AEBAF6D00C497E2 /* Apperance.swift */,
+				923F4F1A1AEC423600C497E2 /* Constants.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -158,18 +175,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		923F4EE91AEBAC1400C497E2 /* ViewController+Cell */ = {
+		923F4EE91AEBAC1400C497E2 /* ViewController+Cells */ = {
 			isa = PBXGroup;
 			children = (
 				923F4EEC1AEBACC100C497E2 /* MainViewController.swift */,
 				923F4EEE1AEBACC600C497E2 /* Projects */,
+				923F4F1C1AEC42E400C497E2 /* Education */,
+				923F4F281AEC525000C497E2 /* TechnicalSkills */,
 			);
+			name = "ViewController+Cells";
 			path = "ViewController+Cell";
 			sourceTree = "<group>";
 		};
 		923F4EEA1AEBAC4700C497E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F231AEC4C8F00C497E2 /* PlainTableViewCell */,
+				923F4F151AEC40DA00C497E2 /* InfoTableViewCell */,
 				923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */,
 			);
 			path = View;
@@ -232,7 +254,9 @@
 		923F4F031AEBF56B00C497E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F211AEC464900C497E2 /* EducationParser.swift */,
 				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
+				923F4F1F1AEC459000C497E2 /* InfoItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,9 +264,42 @@
 		923F4F0D1AEC0BDA00C497E2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		923F4F151AEC40DA00C497E2 /* InfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F0E1AEC0C3200C497E2 /* InfoTableViewCell.swift */,
+				923F4F171AEC40E700C497E2 /* InfoTableViewCell.xib */,
+			);
+			name = InfoTableViewCell;
+			sourceTree = "<group>";
+		};
+		923F4F1C1AEC42E400C497E2 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F1D1AEC436100C497E2 /* EducationViewController.swift */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
+		923F4F231AEC4C8F00C497E2 /* PlainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F241AEC4D0000C497E2 /* PlainTableViewCell.swift */,
+				923F4F261AEC4D4700C497E2 /* PlainTableViewCell.xib */,
+			);
+			name = PlainTableViewCell;
+			sourceTree = "<group>";
+		};
+		923F4F281AEC525000C497E2 /* TechnicalSkills */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */,
+			);
+			name = TechnicalSkills;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */,
+				923F4F191AEC40E700C497E2 /* InfoTableViewCell.xib in Resources */,
 				923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */,
 				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
 				923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */,
 				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
+				923F4F271AEC4D4700C497E2 /* PlainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,15 +378,21 @@
 			files = (
 				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
 				923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */,
+				923F4F251AEC4D0000C497E2 /* PlainTableViewCell.swift in Sources */,
+				923F4F201AEC459000C497E2 /* InfoItem.swift in Sources */,
 				923F4F061AEBF57F00C497E2 /* ProjectsParser.swift in Sources */,
 				923F4EFF1AEBF2FB00C497E2 /* Font.swift in Sources */,
+				923F4F1E1AEC436100C497E2 /* EducationViewController.swift in Sources */,
 				923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */,
-				923F4F0F1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift in Sources */,
+				923F4F0F1AEC0C3200C497E2 /* InfoTableViewCell.swift in Sources */,
 				923F4EF21AEBAF3C00C497E2 /* RoundedTableViewCell.swift in Sources */,
+				923F4F1B1AEC423600C497E2 /* Constants.swift in Sources */,
 				923F4F0A1AEC06F500C497E2 /* Image.swift in Sources */,
 				923F4EC11AEBAB7200C497E2 /* AppDelegate.swift in Sources */,
+				923F4F2A1AEC526A00C497E2 /* TechnicalSkillsViewController.swift in Sources */,
 				923F4EF41AEBAF5800C497E2 /* Color.swift in Sources */,
 				923F4F081AEC05CC00C497E2 /* BaseNavigationController.swift in Sources */,
+				923F4F221AEC464900C497E2 /* EducationParser.swift in Sources */,
 				923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */,
 				923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */,
 				923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */,

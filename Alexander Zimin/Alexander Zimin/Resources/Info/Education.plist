@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>School</string>
+			<key>description</key>
+			<string>Liceum 1580 at Bauman MSTU</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Speciality</string>
+			<key>description</key>
+			<string>Math-Physics</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Years</string>
+			<key>description</key>
+			<string>2010 - 2013</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>University</string>
+			<key>description</key>
+			<string>National Research University Higher School of Economics</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Web Page</string>
+			<key>description</key>
+			<string>http://www.hse.ru/en/</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Faculty</string>
+			<key>description</key>
+			<string>Computer Science</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Faculty Web Page</string>
+			<key>description</key>
+			<string>http://cs.hse.ru/en/</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Programme</string>
+			<key>description</key>
+			<string>Software Engineering</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Years</string>
+			<key>description</key>
+			<string>2013 - Present</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Additional</string>
+			<key>description</key>
+			<string>edX</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Web Page</string>
+			<key>description</key>
+			<string>https://www.edx.org</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>University</string>
+			<key>description</key>
+			<string>MIT</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Programme</string>
+			<key>description</key>
+			<string>Introduction to Computer Science and Programming Using Python</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Final Grade</string>
+			<key>description</key>
+			<string>90%</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Date</string>
+			<key>description</key>
+			<string>October 2012 - January 2013</string>
+		</dict>
+	</array>
+</array>
 </plist>

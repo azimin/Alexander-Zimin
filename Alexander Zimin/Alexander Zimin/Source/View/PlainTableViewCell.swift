@@ -1,14 +1,14 @@
 //
-//  ProjectInfoTableViewCell.swift
+//  PlainTableViewCell.swift
 //  Alexander Zimin
 //
-//  Created by Alex Zimin on 25/04/15.
+//  Created by Alex Zimin on 26/04/15.
 //  Copyright (c) 2015 Alex Zimin. All rights reserved.
 //
 
 import UIKit
 
-class ProjectInfoTableViewCell: RoundedTableViewCell {
+class PlainTableViewCell: RoundedTableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
@@ -17,31 +17,23 @@ class ProjectInfoTableViewCell: RoundedTableViewCell {
         }
     }
     
-    @IBOutlet weak var infoDescriptionLabel: UILabel! {
-        didSet {
-            infoDescriptionLabel.font = UIFont.appRegularFont()
-            infoDescriptionLabel.textColor = UIColor.contentAdditionalElementsColor
-        }
-    }
-    var infoDescription: String = "" {
-        didSet {
-            updateInfoDescriptionLabel()
-        }
-    }
-    
     @IBOutlet weak var accessorizeImageView: UIImageView!
     @IBOutlet weak var accessorizeWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var accessorizeRightConstraint: NSLayoutConstraint!
-
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setOpened(false, animated: false)
+    }
+    
     var selectionEnable: Bool = false {
         didSet {
             userInteractionEnabled = selectionEnable
             accessorizeImageView.hidden = !selectionEnable
-            updateInfoDescriptionLabel()
             
             if selectionEnable {
                 accessorizeRightConstraint.constant = 8
-                accessorizeWidthConstraint.constant = 20
+                accessorizeWidthConstraint.constant = 11
             } else {
                 accessorizeRightConstraint.constant = 0
                 accessorizeWidthConstraint.constant = 0
@@ -49,14 +41,23 @@ class ProjectInfoTableViewCell: RoundedTableViewCell {
         }
     }
     
-    func updateInfoDescriptionLabel() {
-        let mutableString = NSMutableAttributedString(string: infoDescription)
+    private(set) var opened: Bool = false
+    
+    func setOpened(opened: Bool, animated: Bool) {
+        self.opened = opened
+        let duration = animated ? 0.25 : 0.0
         
-        if selectionEnable {
-            mutableString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: NSMakeRange(0, mutableString.length))
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            self.rotateAction(opened)
+        })
+    }
+    
+    private func rotateAction(opened: Bool) {
+        if opened {
+            accessorizeImageView.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2));
+        } else {
+            accessorizeImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
         }
-        
-        infoDescriptionLabel.attributedText = mutableString
     }
     
 }
