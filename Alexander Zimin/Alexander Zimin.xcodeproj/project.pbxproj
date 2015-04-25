@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		923F4EC11AEBAB7200C497E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */; };
-		923F4EC61AEBAB7200C497E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC41AEBAB7200C497E2 /* Main.storyboard */; };
 		923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC71AEBAB7200C497E2 /* Images.xcassets */; };
 		923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */; };
 		923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */; };
@@ -27,13 +26,13 @@
 		923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */; };
 		923F4F0F1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */; };
 		923F4F111AEC3F4900C497E2 /* Education.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F101AEC3F4900C497E2 /* Education.plist */; };
+		923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F121AEC3F8400C497E2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		923F4EBB1AEBAB7200C497E2 /* Alexander Zimin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alexander Zimin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		923F4EBF1AEBAB7200C497E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		923F4EC51AEBAB7200C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		923F4EC71AEBAB7200C497E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		923F4ECA1AEBAB7200C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoTableViewCell.swift; sourceTree = "<group>"; };
 		923F4F101AEC3F4900C497E2 /* Education.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Education.plist; sourceTree = "<group>"; };
+		923F4F131AEC3F8400C497E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		923F4EBD1AEBAB7200C497E2 /* Alexander Zimin */ = {
 			isa = PBXGroup;
 			children = (
-				923F4EC41AEBAB7200C497E2 /* Main.storyboard */,
+				923F4F121AEC3F8400C497E2 /* Main.storyboard */,
 				923F4EE01AEBAB9C00C497E2 /* Source */,
 				923F4EEB1AEBAC6000C497E2 /* Resources */,
 			);
@@ -96,7 +96,7 @@
 			children = (
 				923F4EBF1AEBAB7200C497E2 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		923F4EE01AEBAB9C00C497E2 /* Source */ = {
@@ -109,7 +109,7 @@
 				923F4EE91AEBAC1400C497E2 /* ViewController+Cell */,
 				923F4EEA1AEBAC4700C497E2 /* View */,
 			);
-			name = Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		923F4EE21AEBABB200C497E2 /* Common */ = {
@@ -118,7 +118,7 @@
 				923F4EE31AEBABC000C497E2 /* Classes */,
 				923F4EE41AEBABC400C497E2 /* Extensions */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		923F4EE31AEBABC000C497E2 /* Classes */ = {
@@ -126,7 +126,7 @@
 			children = (
 				923F4EF51AEBAF6D00C497E2 /* Apperance.swift */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		923F4EE41AEBABC400C497E2 /* Extensions */ = {
@@ -137,7 +137,7 @@
 				923F4EFE1AEBF2FB00C497E2 /* Font.swift */,
 				923F4F091AEC06F500C497E2 /* Image.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		923F4EE51AEBABD100C497E2 /* Core */ = {
@@ -146,7 +146,7 @@
 				923F4EE61AEBABE700C497E2 /* Base */,
 				923F4EC01AEBAB7200C497E2 /* AppDelegate.swift */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		923F4EE61AEBABE700C497E2 /* Base */ = {
@@ -155,7 +155,7 @@
 				923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */,
 				923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */,
 			);
-			name = Base;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		923F4EE91AEBAC1400C497E2 /* ViewController+Cell */ = {
@@ -164,7 +164,7 @@
 				923F4EEC1AEBACC100C497E2 /* MainViewController.swift */,
 				923F4EEE1AEBACC600C497E2 /* Projects */,
 			);
-			name = "ViewController+Cell";
+			path = "ViewController+Cell";
 			sourceTree = "<group>";
 		};
 		923F4EEA1AEBAC4700C497E2 /* View */ = {
@@ -172,7 +172,7 @@
 			children = (
 				923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		923F4EEB1AEBAC6000C497E2 /* Resources */ = {
@@ -182,7 +182,7 @@
 				923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */,
 				923F4EC71AEBAB7200C497E2 /* Images.xcassets */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		923F4EEE1AEBACC600C497E2 /* Projects */ = {
@@ -191,7 +191,7 @@
 				923F4EEF1AEBACD000C497E2 /* Projects */,
 				923F4EF01AEBACD600C497E2 /* Project */,
 			);
-			name = Projects;
+			path = Projects;
 			sourceTree = "<group>";
 		};
 		923F4EEF1AEBACD000C497E2 /* Projects */ = {
@@ -200,7 +200,7 @@
 				923F4EF91AEBB58B00C497E2 /* Cells */,
 				923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */,
 			);
-			name = Projects;
+			path = Projects;
 			sourceTree = "<group>";
 		};
 		923F4EF01AEBACD600C497E2 /* Project */ = {
@@ -209,7 +209,7 @@
 				923F4F0D1AEC0BDA00C497E2 /* Cells */,
 				923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */,
 			);
-			name = Project;
+			path = Project;
 			sourceTree = "<group>";
 		};
 		923F4EF91AEBB58B00C497E2 /* Cells */ = {
@@ -217,7 +217,7 @@
 			children = (
 				923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		923F4F001AEBF3D200C497E2 /* Info */ = {
@@ -226,7 +226,7 @@
 				923F4F011AEBF3E100C497E2 /* Projects.plist */,
 				923F4F101AEC3F4900C497E2 /* Education.plist */,
 			);
-			name = Info;
+			path = Info;
 			sourceTree = "<group>";
 		};
 		923F4F031AEBF56B00C497E2 /* Model */ = {
@@ -234,7 +234,7 @@
 			children = (
 				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		923F4F0D1AEC0BDA00C497E2 /* Cells */ = {
@@ -242,7 +242,7 @@
 			children = (
 				923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923F4EC61AEBAB7200C497E2 /* Main.storyboard in Resources */,
 				923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */,
+				923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */,
 				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
 				923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */,
 				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
@@ -338,20 +338,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		923F4EC41AEBAB7200C497E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				923F4EC51AEBAB7200C497E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				923F4ECA1AEBAB7200C497E2 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		923F4F121AEC3F8400C497E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923F4F131AEC3F8400C497E2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -442,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Alexander Zimin/Info.plist";
+				INFOPLIST_FILE = "Alexander Zimin/Source/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Alexander Zimin/Info.plist";
+				INFOPLIST_FILE = "Alexander Zimin/Source/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
