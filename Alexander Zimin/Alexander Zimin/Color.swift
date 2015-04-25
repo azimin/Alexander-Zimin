@@ -44,7 +44,7 @@ extension UIColor {
     }
     
     class var contentSeperatorsColor: UIColor {
-        return UIColor.contentAdditionalElementsColor
+        return UIColor.colorWithHexString("CACACA")
     }
     
 }

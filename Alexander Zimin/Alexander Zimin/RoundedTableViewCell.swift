@@ -20,42 +20,43 @@ class RoundedTableViewCell: UITableViewCell {
         }
     }
     
-    let shape: CAShapeLayer = CAShapeLayer()
-    
-    override func awakeFromNib() {
-        self.layer.addSublayer(shape)
-    }
-    
     override var frame: CGRect {
         didSet {
             updateRoundShape()
         }
     }
     
+    private let shape: CAShapeLayer = CAShapeLayer()
+    private let selectionShape: CAShapeLayer = CAShapeLayer()
+    
+    override func awakeFromNib() {
+        self.layer.addSublayer(shape)
+        
+        self.selectedBackgroundView = UIView()
+        self.selectedBackgroundView.backgroundColor = UIColor.contentSeperatorsColor
+        self.selectedBackgroundView.layer.mask = selectionShape
+        
+        self.contentView.layoutMargins.left += Apperance.defaultSpace
+        self.contentView.layoutMargins.right += Apperance.defaultSpace
+    }
+    
+}
+
+// MARK: - Round shape
+
+extension RoundedTableViewCell {
     func updateRoundShape() {
         var path: UIBezierPath
         
-        path = UIBezierPath(roundedRect: cornersFrame, byRoundingCorners: cornersType, cornerRadii: CGSize(width: Apperance.defaultCornerRadius, height: Apperance.defaultCornerRadius))
+        var frameSpace = CGRect(x: Apperance.defaultSpace, y: 0, width: self.frame.width - Apperance.defaultSpace * 2, height: self.frame.height)
+        path = UIBezierPath(roundedRect: frameSpace, byRoundingCorners: cornersType, cornerRadii: CGSize(width: Apperance.defaultCornerRadius, height: Apperance.defaultCornerRadius))
         
         shape.path = path.CGPath
         shape.fillColor = UIColor.clearColor().CGColor
         shape.strokeColor = UIColor.contentSeperatorsColor.CGColor
-    }
-    
-    private var cornersFrame: CGRect {
-        let space = Apperance.defaultSpace
-        var frame = CGRect(x: Apperance.defaultSpace, y: 0, width: self.frame.width - Apperance.defaultSpace * 2, height: self.frame.height)
         
-        if roundedType == .TopRounded || roundedType == .AllRounded {
-            frame.origin.y += space
-            frame.size.height -= space
-        }
-        
-        if roundedType == .BottomRounded || roundedType == .AllRounded {
-            frame.size.height -= space
-        }
-        
-        return frame
+        selectionShape.path = path.CGPath
+        selectionShape.fillColor = UIColor.contentSeperatorsColor.CGColor
     }
     
     private var cornersType: UIRectCorner {
@@ -70,21 +71,4 @@ class RoundedTableViewCell: UITableViewCell {
             return .allZeros
         }
     }
-    
-    override func setHighlighted(highlighted: Bool, animated: Bool) {
-        if highlighted {
-            shape.fillColor = UIColor.contentSeperatorsColor.CGColor
-        } else {
-            shape.fillColor = UIColor.clearColor().CGColor
-        }
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        if selected {
-            shape.fillColor = UIColor.contentSeperatorsColor.CGColor
-        } else {
-            shape.fillColor = UIColor.clearColor().CGColor
-        }
-    }
-    
 }

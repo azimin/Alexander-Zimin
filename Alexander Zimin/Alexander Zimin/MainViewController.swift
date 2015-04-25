@@ -38,7 +38,13 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        performSegueWithIdentifier("WorkingProjects", sender: nil)
+        
+        if indexPath.row == 0 {
+            performSegueWithIdentifier("WorkingProjects", sender: nil)
+        } else {
+            performSegueWithIdentifier("WorkingProjects", sender: nil)
+        }
+        
     }
 }
 

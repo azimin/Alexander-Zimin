@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>is_mac_OS</key>
+		<true/>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Web Page</string>
+				<key>description</key>
+				<string>http://pasteapp.me</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Company Web Page</string>
+				<key>description</key>
+				<string>http://wiheads.com</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Second member of the project</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>Joined the project when it was 30% ready. Participated in the development, promo-material preparation, sound recording.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>October 2014 - Present</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>E-mail</string>
+				<key>description</key>
+				<string>alex@wihead.com</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_paste</string>
+		<key>name</key>
+		<string>Paste – clipboard history manager for your Mac</string>
+		<key>url</key>
+		<string>https://itunes.apple.com/app/id967805235</string>
+	</dict>
+	<dict>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Web Page</string>
+				<key>description</key>
+				<string>http://motivatemeapp.me</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Project leader</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>Designing, development, preparing promo-material. Currently doing the marketing and optimization.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>April 2015 - Present</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_motivate_me</string>
+		<key>name</key>
+		<string>Motivate me – set goals and habits to achieve success</string>
+		<key>url</key>
+		<string>https://itunes.apple.com/app/id984947870</string>
+	</dict>
+	<dict>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Web Page</string>
+				<key>description</key>
+				<string>http://www.breezy.com</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Main programmer</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>Worked under the leading of a manager from SROST. In the beginning, there were 2 programmers, however, starting from middle of the project, I was working on the code on my own.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>February 2014 - March 2015</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_breezy_2</string>
+		<key>name</key>
+		<string>Breezy 2</string>
+		<key>url</key>
+		<string>https://itunes.apple.com/app/id943573373</string>
+	</dict>
+	<dict>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Team leader</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>Organized a team for participation in BattleHack - Hackathon by PayPal. Main programmer and leadership duties.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>25-26 October 2014</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_foodle</string>
+		<key>name</key>
+		<string>Foodle - paypal hackathon</string>
+		<key>url</key>
+		<string>https://github.com/azimin/FoodlePayPal</string>
+	</dict>
+	<dict>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Main programmer</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>One of the first projects, was created by me and a colleague for the order.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>March 2013 - Present</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_lucky_words</string>
+		<key>name</key>
+		<string>Lucky Words</string>
+		<key>url</key>
+		<string>https://itunes.apple.com/app/id628501742</string>
+	</dict>
+	<dict>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Role</string>
+				<key>description</key>
+				<string>Project leader</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Job</string>
+				<key>description</key>
+				<string>The initial idea was to take a shot at launching the app in a week with a friend doing the marketing. Didn’t work out as well as was expected, but I kept it maintained up to a point.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Date</string>
+				<key>description</key>
+				<string>May 2013 - May 2014</string>
+			</dict>
+		</array>
+		<key>image_name</key>
+		<string>icn_parolium</string>
+		<key>name</key>
+		<string>Parolium - Password Manager and Secure Wallet</string>
+		<key>url</key>
+		<string>https://itunes.apple.com/app/id654070200</string>
+	</dict>
+</array>
+</plist>

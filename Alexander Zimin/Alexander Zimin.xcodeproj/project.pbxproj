@@ -18,6 +18,15 @@
 		923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF51AEBAF6D00C497E2 /* Apperance.swift */; };
 		923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */; };
 		923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */; };
+		923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EFC1AEBEF1400C497E2 /* NSObjcetExtension.swift */; };
+		923F4EFF1AEBF2FB00C497E2 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4EFE1AEBF2FB00C497E2 /* Font.swift */; };
+		923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F011AEBF3E100C497E2 /* Projects.plist */; };
+		923F4F061AEBF57F00C497E2 /* ProjectsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */; };
+		923F4F081AEC05CC00C497E2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */; };
+		923F4F0A1AEC06F500C497E2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F091AEC06F500C497E2 /* Image.swift */; };
+		923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */; };
+		923F4F0F1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */; };
+		923F4F111AEC3F4900C497E2 /* Education.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F101AEC3F4900C497E2 /* Education.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		923F4EF51AEBAF6D00C497E2 /* Apperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apperance.swift; sourceTree = "<group>"; };
 		923F4EF71AEBB57C00C497E2 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		923F4EFC1AEBEF1400C497E2 /* NSObjcetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjcetExtension.swift; sourceTree = "<group>"; };
+		923F4EFE1AEBF2FB00C497E2 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		923F4F011AEBF3E100C497E2 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
+		923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsParser.swift; sourceTree = "<group>"; };
+		923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		923F4F091AEC06F500C497E2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoTableViewCell.swift; sourceTree = "<group>"; };
+		923F4F101AEC3F4900C497E2 /* Education.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Education.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +105,7 @@
 				923F4EBE1AEBAB7200C497E2 /* Supporting Files */,
 				923F4EE21AEBABB200C497E2 /* Common */,
 				923F4EE51AEBABD100C497E2 /* Core */,
+				923F4F031AEBF56B00C497E2 /* Model */,
 				923F4EE91AEBAC1400C497E2 /* ViewController+Cell */,
 				923F4EEA1AEBAC4700C497E2 /* View */,
 			);
@@ -114,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				923F4EF31AEBAF5800C497E2 /* Color.swift */,
+				923F4EFC1AEBEF1400C497E2 /* NSObjcetExtension.swift */,
+				923F4EFE1AEBF2FB00C497E2 /* Font.swift */,
+				923F4F091AEC06F500C497E2 /* Image.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				923F4EE71AEBAC0000C497E2 /* BaseViewController.swift */,
+				923F4F071AEC05CC00C497E2 /* BaseNavigationController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -155,6 +178,7 @@
 		923F4EEB1AEBAC6000C497E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F001AEBF3D200C497E2 /* Info */,
 				923F4EC91AEBAB7200C497E2 /* LaunchScreen.xib */,
 				923F4EC71AEBAB7200C497E2 /* Images.xcassets */,
 			);
@@ -182,6 +206,8 @@
 		923F4EF01AEBACD600C497E2 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F0D1AEC0BDA00C497E2 /* Cells */,
+				923F4F0B1AEC0BC600C497E2 /* ProjectViewController.swift */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -190,6 +216,31 @@
 			isa = PBXGroup;
 			children = (
 				923F4EFA1AEBB61A00C497E2 /* ProjectTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		923F4F001AEBF3D200C497E2 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F011AEBF3E100C497E2 /* Projects.plist */,
+				923F4F101AEC3F4900C497E2 /* Education.plist */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		923F4F031AEBF56B00C497E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		923F4F0D1AEC0BDA00C497E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F0E1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -253,6 +304,8 @@
 			files = (
 				923F4EC61AEBAB7200C497E2 /* Main.storyboard in Resources */,
 				923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */,
+				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
+				923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */,
 				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,12 +318,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
+				923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */,
+				923F4F061AEBF57F00C497E2 /* ProjectsParser.swift in Sources */,
+				923F4EFF1AEBF2FB00C497E2 /* Font.swift in Sources */,
 				923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */,
+				923F4F0F1AEC0C3200C497E2 /* ProjectInfoTableViewCell.swift in Sources */,
 				923F4EF21AEBAF3C00C497E2 /* RoundedTableViewCell.swift in Sources */,
+				923F4F0A1AEC06F500C497E2 /* Image.swift in Sources */,
 				923F4EC11AEBAB7200C497E2 /* AppDelegate.swift in Sources */,
 				923F4EF41AEBAF5800C497E2 /* Color.swift in Sources */,
+				923F4F081AEC05CC00C497E2 /* BaseNavigationController.swift in Sources */,
 				923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */,
 				923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */,
+				923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */,
 				923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Alexander Zimin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -393,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Alexander Zimin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -11,17 +11,14 @@ import UIKit
 class ProjectsViewController: BaseViewController {
 
     @IBOutlet var tableView: UITableView!
-    var projects: [String] = ["Alex", "Alex", "Swag"]
+    var projects: [Project] = ProjectsParser.projects
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.reloadData()
-        
-        tableView.estimatedRowHeight = 85
+        tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-
-        // Do any additional setup after loading the view.
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     }
     
 }
@@ -32,26 +29,31 @@ class ProjectsViewController: BaseViewController {
 extension ProjectsViewController {
     private struct Constants {
         static let projectCellIdentifier = "ProjectCell"
+        static let projectSegueIdentifier = "ShowProject"
     }
 }
 
 // MARK: - UITableViewDataSource
 
 extension ProjectsViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return projects.count
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constants.projectCellIdentifier, forIndexPath: indexPath) as! ProjectTableViewCell
         
-        if indexPath.row == 0 {
-            cell.roundedType = .TopRounded
-        } else if indexPath.row == projects.count - 1 {
-            cell.roundedType = .BottomRounded
-        } else {
-            cell.roundedType = .None
-        }
+        var project = projects[indexPath.section]
+        
+        cell.roundedType = .AllRounded
+        
+        cell.isMacOS = project.isMacOs
+        cell.appNameLabel.text = project.name
+        cell.appIconImageView.image = UIImage(named: project.imageName)
         
         return cell
     }
@@ -60,7 +62,27 @@ extension ProjectsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ProjectsViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return Apperance.defaultSpace
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("ShowProject", sender: projects[indexPath.section])
+    }
+}
+
+// MARK: - Segue
+
+extension ProjectsViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constants.projectSegueIdentifier {
+            let controller = segue.destinationViewController as! ProjectViewController
+            controller.project = sender as! Project
+        }
     }
 }
