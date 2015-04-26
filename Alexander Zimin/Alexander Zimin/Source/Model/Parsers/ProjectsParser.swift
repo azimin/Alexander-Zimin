@@ -15,6 +15,7 @@ class Project {
         static var urlKey = "url"
         static var isMacOSKey = "is_mac_OS"
         static var infoKey = "info"
+        static var screenshotsKey = "screenshots"
         
         static var infoNameKey = "name"
         static var infoDescriptionKey = "description"
@@ -25,12 +26,14 @@ class Project {
     var url: String
     var isMacOs: Bool
     var additionalInfo: [InfoItem] = []
+    var screenshotsNames: [String] = []
     
     init(info: NSDictionary) {
         name = info.parse(Keys.nameKey)
         imageName = info.parse(Keys.imageNameKey)
         url = info.parse(Keys.urlKey)
         isMacOs = info.parse(Keys.isMacOSKey, anotherValue: false)
+        screenshotsNames = info.parse(Keys.screenshotsKey, anotherValue: [])
         
         for additionalInfoItem in info.objectForKey(Keys.infoKey) as! [NSDictionary] {
             let projectInfo = InfoItem(name: additionalInfoItem.parse(Keys.infoNameKey), description: additionalInfoItem.parse(Keys.infoDescriptionKey))

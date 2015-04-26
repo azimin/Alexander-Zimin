@@ -20,5 +20,23 @@
 		<key>description</key>
 		<string>azimin@me.com</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Github</string>
+		<key>description</key>
+		<string>https://github.com/azimin</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>LinkedIn</string>
+		<key>description</key>
+		<string>https://www.linkedin.com/in/alexzimin</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dribbble</string>
+		<key>description</key>
+		<string>https://dribbble.com/azimin</string>
+	</dict>
 </array>
 </plist>

@@ -50,6 +50,13 @@
 		<string>Paste – clipboard history manager for your Mac</string>
 		<key>url</key>
 		<string>https://itunes.apple.com/app/id967805235</string>
+		<key>screenshots</key>
+		<array>
+			<string>sh_paste_1</string>
+			<string>sh_paste_2</string>
+			<string>sh_paste_3</string>
+			<string>sh_paste_4</string>
+		</array>
 	</dict>
 	<dict>
 		<key>info</key>
@@ -85,6 +92,14 @@
 		<string>Motivate me – set goals and habits to achieve success</string>
 		<key>url</key>
 		<string>https://itunes.apple.com/app/id984947870</string>
+		<key>screenshots</key>
+		<array>
+			<string>sh_motivate_1</string>
+			<string>sh_motivate_2</string>
+			<string>sh_motivate_3</string>
+			<string>sh_motivate_4</string>
+			<string>sh_motivate_5</string>
+		</array>
 	</dict>
 	<dict>
 		<key>info</key>
@@ -146,9 +161,15 @@
 		<key>image_name</key>
 		<string>icn_foodle</string>
 		<key>name</key>
-		<string>Foodle - paypal hackathon</string>
+		<string>Foodle - PayPal Hackathon</string>
 		<key>url</key>
 		<string>https://github.com/azimin/FoodlePayPal</string>
+		<key>screenshots</key>
+		<array>
+			<string>sh_foodle_1</string>
+			<string>sh_foodle_2</string>
+			<string>sh_foodle_3</string>
+		</array>
 	</dict>
 	<dict>
 		<key>info</key>
