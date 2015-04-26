@@ -37,6 +37,11 @@
 		923F4F2A1AEC526A00C497E2 /* TechnicalSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */; };
 		923F4F2C1AEC53CE00C497E2 /* TechnicalSkills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */; };
 		923F4F2E1AEC546400C497E2 /* TechnicalSkillsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */; };
+		923F4F311AEC608C00C497E2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F301AEC608C00C497E2 /* InterestsViewController.swift */; };
+		923F4F331AEC634A00C497E2 /* Interests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F321AEC634A00C497E2 /* Interests.plist */; };
+		923F4F361AEC640300C497E2 /* InterestsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F351AEC640300C497E2 /* InterestsParser.swift */; };
+		923F4F3A1AEC66E400C497E2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F4F381AEC66E400C497E2 /* ImageTableViewCell.swift */; };
+		923F4F3B1AEC66E400C497E2 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923F4F391AEC66E400C497E2 /* ImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,11 @@
 		923F4F291AEC526A00C497E2 /* TechnicalSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsViewController.swift; sourceTree = "<group>"; };
 		923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TechnicalSkills.plist; sourceTree = "<group>"; };
 		923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsParser.swift; sourceTree = "<group>"; };
+		923F4F301AEC608C00C497E2 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		923F4F321AEC634A00C497E2 /* Interests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Interests.plist; sourceTree = "<group>"; };
+		923F4F351AEC640300C497E2 /* InterestsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsParser.swift; sourceTree = "<group>"; };
+		923F4F381AEC66E400C497E2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		923F4F391AEC66E400C497E2 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +205,7 @@
 		923F4EEA1AEBAC4700C497E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F371AEC66BD00C497E2 /* ImageTableViewCell */,
 				923F4F231AEC4C8F00C497E2 /* PlainTableViewCell */,
 				923F4F151AEC40DA00C497E2 /* InfoTableViewCell */,
 				923F4EF11AEBAF3C00C497E2 /* RoundedTableViewCell.swift */,
@@ -253,6 +264,7 @@
 				923F4F011AEBF3E100C497E2 /* Projects.plist */,
 				923F4F101AEC3F4900C497E2 /* Education.plist */,
 				923F4F2B1AEC53CE00C497E2 /* TechnicalSkills.plist */,
+				923F4F321AEC634A00C497E2 /* Interests.plist */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -260,9 +272,7 @@
 		923F4F031AEBF56B00C497E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				923F4F211AEC464900C497E2 /* EducationParser.swift */,
-				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
-				923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */,
+				923F4F341AEC63F600C497E2 /* Parsers */,
 				923F4F1F1AEC459000C497E2 /* InfoItem.swift */,
 			);
 			path = Model;
@@ -312,8 +322,29 @@
 		923F4F2F1AEC600400C497E2 /* Interests */ = {
 			isa = PBXGroup;
 			children = (
+				923F4F301AEC608C00C497E2 /* InterestsViewController.swift */,
 			);
 			name = Interests;
+			sourceTree = "<group>";
+		};
+		923F4F341AEC63F600C497E2 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F211AEC464900C497E2 /* EducationParser.swift */,
+				923F4F051AEBF57F00C497E2 /* ProjectsParser.swift */,
+				923F4F2D1AEC546400C497E2 /* TechnicalSkillsParser.swift */,
+				923F4F351AEC640300C497E2 /* InterestsParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		923F4F371AEC66BD00C497E2 /* ImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				923F4F381AEC66E400C497E2 /* ImageTableViewCell.swift */,
+				923F4F391AEC66E400C497E2 /* ImageTableViewCell.xib */,
+			);
+			name = ImageTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +409,11 @@
 				923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */,
 				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
 				923F4F2C1AEC53CE00C497E2 /* TechnicalSkills.plist in Resources */,
+				923F4F3B1AEC66E400C497E2 /* ImageTableViewCell.xib in Resources */,
 				923F4F021AEBF3E100C497E2 /* Projects.plist in Resources */,
 				923F4EC81AEBAB7200C497E2 /* Images.xcassets in Resources */,
 				923F4F271AEC4D4700C497E2 /* PlainTableViewCell.xib in Resources */,
+				923F4F331AEC634A00C497E2 /* Interests.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,9 +427,11 @@
 				923F4F2E1AEC546400C497E2 /* TechnicalSkillsParser.swift in Sources */,
 				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
 				923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */,
+				923F4F311AEC608C00C497E2 /* InterestsViewController.swift in Sources */,
 				923F4F251AEC4D0000C497E2 /* PlainTableViewCell.swift in Sources */,
 				923F4F201AEC459000C497E2 /* InfoItem.swift in Sources */,
 				923F4F061AEBF57F00C497E2 /* ProjectsParser.swift in Sources */,
+				923F4F3A1AEC66E400C497E2 /* ImageTableViewCell.swift in Sources */,
 				923F4EFF1AEBF2FB00C497E2 /* Font.swift in Sources */,
 				923F4F1E1AEC436100C497E2 /* EducationViewController.swift in Sources */,
 				923F4EF61AEBAF6D00C497E2 /* Apperance.swift in Sources */,
@@ -412,6 +447,7 @@
 				923F4EE81AEBAC0000C497E2 /* BaseViewController.swift in Sources */,
 				923F4EF81AEBB57C00C497E2 /* ProjectsViewController.swift in Sources */,
 				923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */,
+				923F4F361AEC640300C497E2 /* InterestsParser.swift in Sources */,
 				923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

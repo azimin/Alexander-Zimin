@@ -40,6 +40,7 @@
                         <segue destination="c3J-Bz-5gY" kind="show" identifier="WorkingProjects" id="N4E-G0-a5z"/>
                         <segue destination="thD-qC-ROa" kind="show" identifier="Education" id="3DF-4c-LcR"/>
                         <segue destination="yvj-y7-vpy" kind="show" identifier="Skills" id="Lva-RG-0np"/>
+                        <segue destination="oLE-el-crO" kind="show" identifier="Interests" id="wVO-Et-Rzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UG-NH-hrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,6 +224,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVp-Xf-lZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2563" y="669"/>
+        </scene>
+        <!--Interests-->
+        <scene sceneID="3HL-dV-NAa">
+            <objects>
+                <viewController title="Interests" id="oLE-el-crO" customClass="InterestsViewController" customModule="Alexander_Zimin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zzz-DD-su8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="oLE-el-crO" id="mXj-wt-3oz"/>
+                            <outlet property="delegate" destination="oLE-el-crO" id="HCR-Bv-jQJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="zzz-DD-su8" id="Aa2-DL-xfv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nN9-Vg-trk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="1358"/>
         </scene>
     </scenes>
     <resources>

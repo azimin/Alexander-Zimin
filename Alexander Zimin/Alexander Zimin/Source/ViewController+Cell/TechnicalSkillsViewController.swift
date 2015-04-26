@@ -24,6 +24,7 @@ class TechnicalSkillsViewController: BaseViewController {
         
         tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
         tableView.registerNib(UINib(nibName: Constants.plainTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.plainTableViewCellIdentifier)
+        tableView.registerNib(UINib(nibName: "SpaceTableViewCell", bundle: nil), forCellReuseIdentifier: "SpaceTableViewCell")
     }
     
     func numberOfElementsInSection(section: Int) -> Int {
@@ -52,11 +53,12 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: RoundedTableViewCell
         
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             cell = titleCell(tableView, cellForRowAtIndexPath: indexPath)
-        } else if indexPath.row == 1 {
+        case 1:
             cell = acquiredCell(tableView, cellForRowAtIndexPath: indexPath)
-        } else {
+        default:
             cell = skillCell(tableView, cellForRowAtIndexPath: indexPath)
         }
         

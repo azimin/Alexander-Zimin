@@ -21,7 +21,7 @@ class BaseNavigationController: UINavigationController {
         self.navigationBar.titleTextAttributes = textAttributes
         
         self.navigationBar.setBackgroundImage(UIImage.imageFromColor(UIColor.backgroundColor), forBarMetrics: UIBarMetrics.Default)
-        self.navigationBar.tintColor = UIColor.backgroundElementsColor
+        self.navigationBar.tintColor = UIColor.backgroundElementsColor.colorWithAlphaComponent(0.6)
         
         self.navigationBar.translucent = false
     }

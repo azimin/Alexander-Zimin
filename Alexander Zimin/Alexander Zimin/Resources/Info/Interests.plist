@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Mountains</string>
+		<key>image_name</key>
+		<string>icn_paste</string>
+		<key>description</key>
+		<string>One of the most important part for inside motivations is travaling, I think. But mountains not jsut travaling, but harness too, that gives year long motivation</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mountains</string>
+		<key>image_name</key>
+		<string>icn_paste</string>
+		<key>description</key>
+		<string>One of the most important part for inside motivations is travaling, I think. But mountains not jsut travaling, but harness too, that gives year long motivation</string>
+	</dict>
+</array>
+</plist>
