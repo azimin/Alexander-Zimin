@@ -13,7 +13,7 @@
 			<key>name</key>
 			<string>Role</string>
 			<key>description</key>
-			<string>One of the organizers. Main speaker, give talk every meeting. </string>
+			<string>One of the organizers. Main speaker, giving talks at every meeting. </string>
 		</dict>
 		<dict>
 			<key>name</key>

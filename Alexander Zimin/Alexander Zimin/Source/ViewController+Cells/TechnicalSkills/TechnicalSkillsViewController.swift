@@ -104,6 +104,7 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constants.plainTableViewCellIdentifier, forIndexPath: indexPath) as! PlainTableViewCell
         
         cell.nameLabel.text = technicalSkills[indexPath.section].skills[indexPath.row - 2]
+        cell.nameLabel.textColor = UIColor.contentAdditionalElementsColor
         cell.selectionEnable = false
         
         return cell

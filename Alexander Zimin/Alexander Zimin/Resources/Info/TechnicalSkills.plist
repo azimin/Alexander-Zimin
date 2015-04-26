@@ -6,7 +6,7 @@
 		<key>name</key>
 		<string>Development</string>
 		<key>description</key>
-		<string>Know patterns and have expirience of development process.</string>
+		<string>Knowledge of the patterns and experience of the development process.</string>
 		<key>skills</key>
 		<array>
 			<string>Test-driven development</string>
@@ -19,7 +19,7 @@
 		<key>name</key>
 		<string>Programming</string>
 		<key>description</key>
-		<string>Starts programing in liceum while I was 15 years old. Begin iOS Dveloping at the age of 16.</string>
+		<string>Started programming at the age of 15. Began iOS Developing at 16.</string>
 		<key>skills</key>
 		<array>
 			<string>Objective-C</string>
@@ -35,7 +35,7 @@
 		<key>name</key>
 		<string>Design</string>
 		<key>description</key>
-		<string>Familiar with designing user friendly interface.</string>
+		<string>Familiar with designing a user friendly interface.</string>
 		<key>skills</key>
 		<array>
 			<string>User Experience</string>
