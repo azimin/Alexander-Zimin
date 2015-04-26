@@ -10,45 +10,50 @@ import UIKit
 
 class MainViewController: BaseViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    var items = ["Working projects", "Education", "Technical Skills", "Interests"]
+    @IBOutlet weak var collectionView: UICollectionView!
+    var items: [MenuItem] = MenuItemsParser.menuItems
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let numberOfItemsPerSmallerSide: CGFloat = 2
+        let width = (min(screenSize.height, screenSize.width) - Apperance.defaultSpace * 3) / numberOfItemsPerSmallerSide
+        
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.itemSize = CGSize(width: width, height: 166)
+        layout?.minimumLineSpacing = Apperance.defaultSpace
+        layout?.minimumInteritemSpacing = Apperance.defaultSpace
+        
+        collectionView.contentInset = UIEdgeInsets(top: Apperance.defaultSpace, left: Apperance.defaultSpace, bottom: Apperance.defaultSpace, right: Apperance.defaultSpace)
     }
 }
 
-
-extension MainViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MenuItem", forIndexPath: indexPath) as! MenuItemCollectionViewCell
         
-        cell.textLabel?.text = items[indexPath.row]
+        let item = items[indexPath.row]
+        
+        cell.categoryNameLabel.text = item.name
+        cell.iconImage.image = UIImage(named: item.imageName)
+        cell.fillWithColor(item.color)
         
         return cell
     }
 }
 
-extension MainViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
         
-        if indexPath.row == 0 {
-            performSegueWithIdentifier("WorkingProjects", sender: nil)
-        } else if indexPath.row == 1 {
-            performSegueWithIdentifier("Education", sender: nil)
-        } else if indexPath.row == 2 {
-            performSegueWithIdentifier("Skills", sender: nil)
-        } else {
-            performSegueWithIdentifier("Interests", sender: nil)
-        }
-        
+        appColor.updateColor(items[indexPath.row].color) 
+        self.performSegueWithIdentifier(items[indexPath.row].segueIdentifier, sender: nil)
     }
+    
+    
 }
 

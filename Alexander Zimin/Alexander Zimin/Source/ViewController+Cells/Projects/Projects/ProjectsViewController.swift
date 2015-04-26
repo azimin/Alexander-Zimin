@@ -12,6 +12,7 @@ class ProjectsViewController: BaseViewController {
 
     @IBOutlet var tableView: UITableView!
     var projects: [Project] = ProjectsParser.projects
+    var savedColor: UIColor = appColor.contentColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,15 @@ class ProjectsViewController: BaseViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        savedColor = appColor.contentColor
+        appColor.resetColor()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        appColor.updateColor(savedColor)
     }
 }
 

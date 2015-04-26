@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>segue</key>
+		<string>WorkingProjects</string>
+		<key>name</key>
+		<string>Projects</string>
+		<key>image_name</key>
+		<string>item_projects</string>
+		<key>color</key>
+		<string>5597CB</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Education</string>
+		<key>name</key>
+		<string>Education</string>
+		<key>image_name</key>
+		<string>item_education</string>
+		<key>color</key>
+		<string>BF6868</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Skills</string>
+		<key>name</key>
+		<string>Skills</string>
+		<key>image_name</key>
+		<string>item_skills</string>
+		<key>color</key>
+		<string>8C77B7</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Interests</string>
+		<key>name</key>
+		<string>Interests</string>
+		<key>image_name</key>
+		<string>item_interests</string>
+		<key>color</key>
+		<string>62986D</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Path</string>
+		<key>name</key>
+		<string>Path</string>
+		<key>image_name</key>
+		<string>item_path</string>
+		<key>color</key>
+		<string>ED9056</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Activity</string>
+		<key>name</key>
+		<string>Activity</string>
+		<key>image_name</key>
+		<string>item_activity</string>
+		<key>color</key>
+		<string>D66271</string>
+	</dict>
+</array>
+</plist>

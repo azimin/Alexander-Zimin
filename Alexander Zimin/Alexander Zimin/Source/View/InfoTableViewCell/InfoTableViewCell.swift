@@ -29,7 +29,12 @@ class InfoTableViewCell: RoundedTableViewCell {
         }
     }
     
-    @IBOutlet weak var accessorizeImageView: UIImageView!
+    @IBOutlet weak var accessorizeImageView: UIImageView! {
+        didSet {
+            accessorizeImageView.image = accessorizeImageView.image?.imageWithColor(appColor.contentColor)
+        }
+    }
+    
     @IBOutlet weak var accessorizeWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var accessorizeRightConstraint: NSLayoutConstraint!
 

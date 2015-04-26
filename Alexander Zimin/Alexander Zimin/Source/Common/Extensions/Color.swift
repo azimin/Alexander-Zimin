@@ -8,6 +8,28 @@
 
 import UIKit
 
+let appColor = AZColor()
+
+class AZColor {
+    private(set) var contentColor = UIColor.colorWithHexString("000000")
+    
+    func resetColor() {
+       contentColor = UIColor.colorWithHexString("6F6F6F")
+    }
+    
+    func updateColor(color: UIColor) {
+        updateColor(color, isWithNotification: true)
+    }
+    
+    func updateColor(color: UIColor, isWithNotification: Bool) {
+        contentColor = color
+        
+        if isWithNotification {
+            NSNotificationCenter.defaultCenter().postNotificationName(Constants.kAZNotificationColorChanged, object: nil)
+        }
+    }
+}
+
 // MARK: - Background Colors
 extension UIColor {
     /** Example: navigation bar color */
@@ -35,16 +57,20 @@ extension UIColor {
     
     /** Example: name color */
     class var contentElementsColor: UIColor {
-        return UIColor.colorWithHexString("000000")
+        return appColor.contentColor
     }
     
     /** Example: info color */
     class var contentAdditionalElementsColor: UIColor {
-        return UIColor.contentElementsColor.colorWithAlphaComponent(0.6)
+        return UIColor.blackColor().colorWithAlphaComponent(0.6)
     }
     
     class var contentSeperatorsColor: UIColor {
-        return UIColor.colorWithHexString("CACACA")
+        return appColor.contentColor
+    }
+    
+    class var contentSeperatorsSelectionColor: UIColor {
+        return UIColor.colorWithHexString("F3F3F3")
     }
     
 }

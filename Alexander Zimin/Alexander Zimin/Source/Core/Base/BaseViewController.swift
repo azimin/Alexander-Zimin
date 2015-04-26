@@ -9,6 +9,10 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
+    var screenSize: CGSize {
+        return UIScreen.mainScreen().bounds.size
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

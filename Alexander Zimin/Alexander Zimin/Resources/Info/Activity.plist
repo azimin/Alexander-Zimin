@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>School</string>
+			<key>description</key>
+			<string>Liceum 1580 at Bauman MSTU</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Speciality</string>
+			<key>description</key>
+			<string>Math-Physics</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Years</string>
+			<key>description</key>
+			<string>2010 - 2013</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>School</string>
+			<key>description</key>
+			<string>Liceum 1580 at Bauman MSTU</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Speciality</string>
+			<key>description</key>
+			<string>Math-Physics</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Years</string>
+			<key>description</key>
+			<string>2010 - 2013</string>
+		</dict>
+	</array>
+</array>
+</plist>

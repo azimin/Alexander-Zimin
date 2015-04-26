@@ -12,6 +12,9 @@ class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("setup"), name: Constants.kAZNotificationColorChanged, object: nil)
+        
         setup()
     }
 
@@ -21,7 +24,7 @@ class BaseNavigationController: UINavigationController {
         self.navigationBar.titleTextAttributes = textAttributes
         
         self.navigationBar.setBackgroundImage(UIImage.imageFromColor(UIColor.backgroundColor), forBarMetrics: UIBarMetrics.Default)
-        self.navigationBar.tintColor = UIColor.backgroundElementsColor.colorWithAlphaComponent(0.6)
+        self.navigationBar.tintColor = appColor.contentColor
         
         self.navigationBar.translucent = false
     }

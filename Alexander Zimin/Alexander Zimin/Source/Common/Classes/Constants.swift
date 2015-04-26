@@ -9,6 +9,8 @@
 import Foundation
 
 struct Constants {
+    static let kAZNotificationColorChanged = "kAZNotificationColorChanged"
+    
     static let infoTableViewCellIdentifier = "InfoTableViewCell"
     static let plainTableViewCellIdentifier = "PlainTableViewCell"
     static let imageTableViewCellIdentifier = "ImageTableViewCell"

@@ -1,5 +1,5 @@
 //
-//  EducationParser.swift
+//  ActivityParser.swift
 //  Alexander Zimin
 //
 //  Created by Alex Zimin on 26/04/15.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class EducationParser {
+class ActivityParser {
     private struct Keys {
         static var infoNameKey = "name"
         static var infoDescriptionKey = "description"
     }
     
-    static var education: [[InfoItem]] = EducationParser.loadEducationInfo()
+    static var education: [[InfoItem]] = ActivityParser.loadActivities()
     
-    private class func loadEducationInfo() -> [[InfoItem]] {
+    private class func loadActivities() -> [[InfoItem]] {
         var result: [[InfoItem]] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Education", ofType: "plist")!)!
+        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Activity", ofType: "plist")!)!
         
         for educationCategoryArray in arr as! [NSArray] {
             var localResult: [InfoItem] = []

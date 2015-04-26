@@ -43,7 +43,7 @@ extension InterestsViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(Constants.imageTableViewCellIdentifier, forIndexPath: indexPath) as! ImageTableViewCell
             
             cell.roundedType = .TopRounded
-            cell.nameLabel.text = interests[indexPath.row].name
+            cell.nameLabel.text = interests[indexPath.section].name
             cell.iconImageView.image = UIImage(named: interests[indexPath.row].imageName)
             
             return cell
@@ -51,8 +51,8 @@ extension InterestsViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
             
             cell.roundedType = .BottomRounded
-            cell.nameLabel.text = "How I feel about"
-            cell.infoDescription = interests[indexPath.row].description
+            cell.nameLabel.text = "Personal"
+            cell.infoDescription = interests[indexPath.section].description
             cell.selectionEnable = false
             
             return cell

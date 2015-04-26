@@ -33,7 +33,7 @@ class RoundedTableViewCell: UITableViewCell {
         self.layer.addSublayer(shape)
         
         self.selectedBackgroundView = UIView()
-        self.selectedBackgroundView.backgroundColor = UIColor.contentSeperatorsColor
+        self.selectedBackgroundView.backgroundColor = UIColor.contentSeperatorsSelectionColor
         self.selectedBackgroundView.layer.mask = selectionShape
         
         self.contentView.layoutMargins.left += Apperance.defaultSpace
@@ -56,7 +56,7 @@ extension RoundedTableViewCell {
         shape.strokeColor = UIColor.contentSeperatorsColor.CGColor
         
         selectionShape.path = path.CGPath
-        selectionShape.fillColor = UIColor.contentSeperatorsColor.CGColor
+        selectionShape.fillColor = UIColor.contentSeperatorsSelectionColor.CGColor
     }
     
     private var cornersType: UIRectCorner {
