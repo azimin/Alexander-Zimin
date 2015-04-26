@@ -97,6 +97,7 @@
                         <segue destination="yvj-y7-vpy" kind="show" identifier="Skills" id="Lva-RG-0np"/>
                         <segue destination="oLE-el-crO" kind="show" identifier="Interests" id="wVO-Et-Rzb"/>
                         <segue destination="re6-J0-C0I" kind="show" identifier="Activity" id="F14-uF-EDT"/>
+                        <segue destination="nn3-eV-kac" kind="show" identifier="Bio" id="cvb-0e-KBx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UG-NH-hrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,6 +282,60 @@
             </objects>
             <point key="canvasLocation" x="2563" y="2041"/>
         </scene>
+        <!--Bio-->
+        <scene sceneID="p6M-Vs-agQ">
+            <objects>
+                <viewController title="Bio" id="nn3-eV-kac" customClass="BioViewController" customModule="Alexander_Zimin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="154" sectionHeaderHeight="22" sectionFooterHeight="22" id="m28-C2-8ST">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AvaCell" rowHeight="160" id="Vsq-ES-KqS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vsq-ES-KqS" id="VNm-pK-pv8">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bio_ava" translatesAutoresizingMaskIntoConstraints="NO" id="20b-T5-0Au">
+                                            <rect key="frame" x="236" y="16" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="TNP-3z-Xf7"/>
+                                                <constraint firstAttribute="width" constant="128" id="cPT-u6-CJC"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="20b-T5-0Au" firstAttribute="top" secondItem="VNm-pK-pv8" secondAttribute="topMargin" constant="16" id="FnZ-lM-fAD"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="20b-T5-0Au" secondAttribute="bottom" constant="16" id="KyQ-Ce-0uh"/>
+                                        <constraint firstAttribute="centerX" secondItem="20b-T5-0Au" secondAttribute="centerX" id="Urd-Ci-gad"/>
+                                        <constraint firstItem="20b-T5-0Au" firstAttribute="top" secondItem="VNm-pK-pv8" secondAttribute="topMargin" constant="8" id="X57-t2-VUu"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="20b-T5-0Au" secondAttribute="bottom" constant="8" id="dVk-6w-FfR"/>
+                                        <constraint firstAttribute="centerY" secondItem="20b-T5-0Au" secondAttribute="centerY" id="qwL-r5-szT"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="FnZ-lM-fAD"/>
+                                            <exclude reference="KyQ-Ce-0uh"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nn3-eV-kac" id="sYs-j7-Edi"/>
+                            <outlet property="delegate" destination="nn3-eV-kac" id="jFx-5C-6GJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="m28-C2-8ST" id="NCa-8V-oYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OC7-RB-vno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="2776"/>
+        </scene>
         <!--Technical Skills-->
         <scene sceneID="XTA-8O-8zw">
             <objects>
@@ -325,6 +380,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bio_ava" width="128" height="128"/>
         <image name="icn_motivate_me" width="64" height="64"/>
         <image name="test" width="50" height="50"/>
         <image name="tv_accessorize" width="43" height="43"/>

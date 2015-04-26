@@ -24,8 +24,8 @@ class ActivityParser {
             var localResult: [InfoItem] = []
             
             for additionalInfoItem in educationCategoryArray as! [NSDictionary] {
-                let projectInfo = InfoItem(name: additionalInfoItem.parse(Keys.infoNameKey), description: additionalInfoItem.parse(Keys.infoDescriptionKey))
-                localResult.append(projectInfo)
+                let activityInfo = InfoItem(name: additionalInfoItem.parse(Keys.infoNameKey), description: additionalInfoItem.parse(Keys.infoDescriptionKey))
+                localResult.append(activityInfo)
             }
             
             result.append(localResult)

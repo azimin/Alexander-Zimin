@@ -44,16 +44,6 @@
 	</dict>
 	<dict>
 		<key>segue</key>
-		<string>Path</string>
-		<key>name</key>
-		<string>Path</string>
-		<key>image_name</key>
-		<string>item_path</string>
-		<key>color</key>
-		<string>ED9056</string>
-	</dict>
-	<dict>
-		<key>segue</key>
 		<string>Activity</string>
 		<key>name</key>
 		<string>Activity</string>
@@ -61,6 +51,16 @@
 		<string>item_activity</string>
 		<key>color</key>
 		<string>D66271</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>Bio</string>
+		<key>name</key>
+		<string>Bio</string>
+		<key>image_name</key>
+		<string>item_bio</string>
+		<key>color</key>
+		<string>696969</string>
 	</dict>
 </array>
 </plist>

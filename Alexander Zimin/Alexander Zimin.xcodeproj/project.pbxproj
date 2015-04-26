@@ -48,6 +48,9 @@
 		92BB95DA1AED0D6300C1748A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB95D91AED0D6300C1748A /* ActivityViewController.swift */; };
 		92BB95DC1AED0D9500C1748A /* Activity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92BB95DB1AED0D9500C1748A /* Activity.plist */; };
 		92BB95DE1AED0E4C00C1748A /* ActivityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB95DD1AED0E4C00C1748A /* ActivityParser.swift */; };
+		92BB95E11AED28A100C1748A /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB95E01AED28A100C1748A /* BioViewController.swift */; };
+		92BB95E31AED294900C1748A /* Bio.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92BB95E21AED294900C1748A /* Bio.plist */; };
+		92BB95E81AED29B600C1748A /* BioParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB95E71AED29B600C1748A /* BioParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		92BB95D91AED0D6300C1748A /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		92BB95DB1AED0D9500C1748A /* Activity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Activity.plist; sourceTree = "<group>"; };
 		92BB95DD1AED0E4C00C1748A /* ActivityParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityParser.swift; sourceTree = "<group>"; };
+		92BB95E01AED28A100C1748A /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		92BB95E21AED294900C1748A /* Bio.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bio.plist; sourceTree = "<group>"; };
+		92BB95E71AED29B600C1748A /* BioParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +286,7 @@
 				923F4F321AEC634A00C497E2 /* Interests.plist */,
 				92BB95D41AED035700C1748A /* MenuItems.plist */,
 				92BB95DB1AED0D9500C1748A /* Activity.plist */,
+				92BB95E21AED294900C1748A /* Bio.plist */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -351,6 +358,7 @@
 				923F4F351AEC640300C497E2 /* InterestsParser.swift */,
 				92BB95D61AED047100C1748A /* MenuItemsParser.swift */,
 				92BB95DD1AED0E4C00C1748A /* ActivityParser.swift */,
+				92BB95E71AED29B600C1748A /* BioParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 		92BB95DF1AED253E00C1748A /* Bio */ = {
 			isa = PBXGroup;
 			children = (
+				92BB95E01AED28A100C1748A /* BioViewController.swift */,
 			);
 			name = Bio;
 			sourceTree = "<group>";
@@ -457,6 +466,7 @@
 				923F4ECB1AEBAB7200C497E2 /* LaunchScreen.xib in Resources */,
 				923F4F191AEC40E700C497E2 /* InfoTableViewCell.xib in Resources */,
 				923F4F141AEC3F8400C497E2 /* Main.storyboard in Resources */,
+				92BB95E31AED294900C1748A /* Bio.plist in Resources */,
 				923F4F111AEC3F4900C497E2 /* Education.plist in Resources */,
 				92BB95DC1AED0D9500C1748A /* Activity.plist in Resources */,
 				923F4F2C1AEC53CE00C497E2 /* TechnicalSkills.plist in Resources */,
@@ -476,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923F4F2E1AEC546400C497E2 /* TechnicalSkillsParser.swift in Sources */,
+				92BB95E81AED29B600C1748A /* BioParser.swift in Sources */,
 				923F4EED1AEBACC100C497E2 /* MainViewController.swift in Sources */,
 				92BB95DE1AED0E4C00C1748A /* ActivityParser.swift in Sources */,
 				923F4EFD1AEBEF1400C497E2 /* NSObjcetExtension.swift in Sources */,
@@ -504,6 +515,7 @@
 				923F4F0C1AEC0BC600C497E2 /* ProjectViewController.swift in Sources */,
 				923F4F361AEC640300C497E2 /* InterestsParser.swift in Sources */,
 				923F4EFB1AEBB61A00C497E2 /* ProjectTableViewCell.swift in Sources */,
+				92BB95E11AED28A100C1748A /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
