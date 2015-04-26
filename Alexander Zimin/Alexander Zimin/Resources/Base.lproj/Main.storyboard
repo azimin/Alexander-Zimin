@@ -37,7 +37,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOk-Dd-2fZ">
                                                     <rect key="frame" x="0.0" y="15" width="144" height="136"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-OV-rmp">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_interest_hiking" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-OV-rmp">
                                                             <rect key="frame" x="27" y="8" width="90" height="90"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="90" id="8os-Hr-TKh"/>
@@ -456,8 +456,8 @@
     </scenes>
     <resources>
         <image name="bio_ava" width="128" height="128"/>
+        <image name="icn_interest_hiking" width="50" height="50"/>
         <image name="icn_motivate_me" width="64" height="64"/>
-        <image name="test" width="50" height="50"/>
         <image name="tv_accessorize" width="43" height="43"/>
     </resources>
 </document>

@@ -4,24 +4,53 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>iOS Development</string>
-		<key>acquired</key>
-		<string>A lot of books, stanford lectures and practice</string>
+		<string>Development</string>
+		<key>description</key>
+		<string>Know patterns and have expirience of development process.</string>
 		<key>skills</key>
 		<array>
-			<string>TDD</string>
-			<string>OOD</string>
+			<string>Test-driven development</string>
+			<string>Object-oriented design</string>
+			<string>Pеrfоrmаnсе аnаlуsіs</string>
+			<string>SDK development</string>
 		</array>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>iOS Development</string>
-		<key>acquired</key>
-		<string>A lot of books, stanford lectures and practice</string>
+		<string>Programming</string>
+		<key>description</key>
+		<string>Starts programing in liceum while I was 15 years old. Begin iOS Dveloping at the age of 16.</string>
 		<key>skills</key>
 		<array>
-			<string>TDD</string>
-			<string>OOD</string>
+			<string>Objective-C</string>
+			<string>Swift</string>
+			<string>C#</string>
+			<string>C</string>
+			<string>C++</string>
+			<string>Java</string>
+			<string>Python</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Design</string>
+		<key>description</key>
+		<string>Familiar with designing user friendly interface.</string>
+		<key>skills</key>
+		<array>
+			<string>User Experience</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Computer Graphics</string>
+		<key>description</key>
+		<string>Use tools above to draw UI design.</string>
+		<key>skills</key>
+		<array>
+			<string>Adobe Photoshop</string>
+			<string>Adobe Illustrator</string>
+			<string>Sketch</string>
 		</array>
 	</dict>
 </array>

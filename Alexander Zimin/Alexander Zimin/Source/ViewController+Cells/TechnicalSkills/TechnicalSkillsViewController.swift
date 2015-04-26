@@ -94,8 +94,8 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
         
         cell.selectionEnable = false
-        cell.nameLabel.text = "Acquired by"
-        cell.infoDescription = technicalSkills[indexPath.section].acquired
+        cell.nameLabel.text = "Info"
+        cell.infoDescription = technicalSkills[indexPath.section].description
         
         return cell
     }

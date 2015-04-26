@@ -37,7 +37,7 @@ class PlainTableViewCell: RoundedTableViewCell {
             accessorizeImageView.hidden = !selectionEnable
             
             if selectionEnable {
-                accessorizeRightConstraint.constant = 8
+                accessorizeRightConstraint.constant = 16
                 accessorizeWidthConstraint.constant = 11
                 nameLabel.font = UIFont.appMediumFont()
             } else {

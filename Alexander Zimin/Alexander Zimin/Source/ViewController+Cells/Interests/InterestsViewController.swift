@@ -44,7 +44,7 @@ extension InterestsViewController: UITableViewDataSource {
             
             cell.roundedType = .TopRounded
             cell.nameLabel.text = interests[indexPath.section].name
-            cell.iconImageView.image = UIImage(named: interests[indexPath.row].imageName)
+            cell.iconImageView.image = UIImage(named: interests[indexPath.section].imageName)?.imageWithColor(UIColor.contentElementsColor)
             
             return cell
         } else {

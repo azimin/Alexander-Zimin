@@ -6,15 +6,15 @@
 		<key>name</key>
 		<string>Mountain hiking</string>
 		<key>image_name</key>
-		<string>icn_paste</string>
+		<string>icn_interest_hiking</string>
 		<key>description</key>
-		<string>Hiking means a lot to me as it helps to meet and overcome difficulties and give a great boost of energy for a long time. I believe, my biggest achievement is the conquest of Mount Elbrus at the age of 13.</string>
+		<string>Hiking means a lot to me as it helps to meet and overcome difficulties. Also it gives a great boost of energy for a long time. I believe, my biggest achievement is the conquest of Mount Elbrus at the age of 13.</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Psychology</string>
 		<key>image_name</key>
-		<string>icn_paste</string>
+		<string>icn_interest_psychology</string>
 		<key>description</key>
 		<string>I&apos;m fond of studying individuals and the society as a whole, functioning of the inner systems and the process of decision-making of different people.</string>
 	</dict>
@@ -22,23 +22,23 @@
 		<key>name</key>
 		<string>Skiing</string>
 		<key>image_name</key>
-		<string>icn_paste</string>
+		<string>icn_interest_skiing</string>
 		<key>description</key>
-		<string>I have been skiing in the mountains regularly since I was 5 years old. I wouldn&apos;t change the feeling of speed when you are going down the slope for the world.</string>
+		<string>I have been skiing in the mountains regularly since I was 5 years old. I wouldn&apos;t trade the feeling of speed when you are going down the slope for anything.</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Designing</string>
 		<key>image_name</key>
-		<string>icn_paste</string>
+		<string>icn_interest_design</string>
 		<key>description</key>
-		<string>In my free time I enjoy experimenting with design. The design in most of my project was created and performed by me.</string>
+		<string>In my free time I enjoy experimenting with design. The design in most of my projects was created and performed by me.</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Literature</string>
 		<key>image_name</key>
-		<string>icn_paste</string>
+		<string>icn_interest_literature</string>
 		<key>description</key>
 		<string>I enjoy reading fiction to examine the point of view of the author in the piece and the period of time when it was written.</string>
 	</dict>

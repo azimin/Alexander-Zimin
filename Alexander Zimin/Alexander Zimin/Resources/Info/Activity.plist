@@ -5,41 +5,105 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string>School</string>
+			<string>Name</string>
 			<key>description</key>
-			<string>Liceum 1580 at Bauman MSTU</string>
+			<string>CocoaHeads Moscow</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Speciality</string>
+			<string>Role</string>
 			<key>description</key>
-			<string>Math-Physics</string>
+			<string>One of the organizers. Main speaker, give talk every meeting. </string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Years</string>
+			<string>Web page</string>
 			<key>description</key>
-			<string>2010 - 2013</string>
+			<string>https://www.facebook.com/cocoaheadsmsk</string>
 		</dict>
 	</array>
 	<array>
 		<dict>
 			<key>name</key>
-			<string>School</string>
+			<string>Name</string>
 			<key>description</key>
-			<string>Liceum 1580 at Bauman MSTU</string>
+			<string>First Swift School in Russia</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Speciality</string>
+			<string>Role</string>
 			<key>description</key>
-			<string>Math-Physics</string>
+			<string>Second teacher</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Years</string>
+			<string>Organization</string>
 			<key>description</key>
-			<string>2010 - 2013</string>
+			<string>Empatika</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Dates</string>
+			<key>description</key>
+			<string>August 2014</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Name</string>
+			<key>description</key>
+			<string>HSE &quot;UX Design and iOS Development&quot;</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Role</string>
+			<key>description</key>
+			<string>Assistant</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Web page</string>
+			<key>description</key>
+			<string>https://itunes.apple.com/course/id941293188</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Dates</string>
+			<key>description</key>
+			<string>November 2014 - Present</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Name</string>
+			<key>description</key>
+			<string>Mobile Developer &amp; Business Day 2014</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Role</string>
+			<key>description</key>
+			<string>Speaker</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Topic</string>
+			<key>description</key>
+			<string>Swift</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Web page</string>
+			<key>description</key>
+			<string>http://by.mdday.ru</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Date</string>
+			<key>description</key>
+			<string>7 November 2014</string>
 		</dict>
 	</array>
 </array>

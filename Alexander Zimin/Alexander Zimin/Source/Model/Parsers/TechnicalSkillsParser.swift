@@ -11,17 +11,17 @@ import Foundation
 class TechnicalSkill {
     private struct Keys {
         static var nameKey = "name"
-        static var acquiredKey = "acquired"
+        static var descriptionKey = "description"
         static var skillsKey = "skills"
     }
     
     var name: String
-    var acquired: String
+    var description: String
     var skills: [String] = []
     
     init(info: NSDictionary) {
         name = info.parse(Keys.nameKey)
-        acquired = info.parse(Keys.acquiredKey)
+        description = info.parse(Keys.descriptionKey)
         skills = info.parse(Keys.skillsKey)
     }
 }
