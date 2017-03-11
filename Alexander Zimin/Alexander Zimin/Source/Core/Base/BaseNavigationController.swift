@@ -13,20 +13,20 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("setup"), name: Constants.kAZNotificationColorChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BaseNavigationController.setup), name: NSNotification.Name(rawValue: Constants.kAZNotificationColorChanged), object: nil)
         
         setup()
     }
 
     func setup() {
-        var textAttributes = [NSForegroundColorAttributeName: UIColor.backgroundElementsColor,
+        let textAttributes = [NSForegroundColorAttributeName: UIColor.backgroundElementsColor,
             NSFontAttributeName: UIFont.appMediumFont()]
         self.navigationBar.titleTextAttributes = textAttributes
         
-        self.navigationBar.setBackgroundImage(UIImage.imageFromColor(UIColor.backgroundColor), forBarMetrics: UIBarMetrics.Default)
+        self.navigationBar.setBackgroundImage(UIImage.imageFromColor(UIColor.backgroundColor), for: UIBarMetrics.default)
         self.navigationBar.tintColor = appColor.contentColor
         
-        self.navigationBar.translucent = false
+        self.navigationBar.isTranslucent = false
     }
 
 }

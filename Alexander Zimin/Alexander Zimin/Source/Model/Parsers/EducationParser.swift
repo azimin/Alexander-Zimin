@@ -9,16 +9,16 @@
 import Foundation
 
 class EducationParser {
-    private struct Keys {
+    fileprivate struct Keys {
         static var infoNameKey = "name"
         static var infoDescriptionKey = "description"
     }
     
     static var education: [[InfoItem]] = EducationParser.loadEducationInfo()
     
-    private class func loadEducationInfo() -> [[InfoItem]] {
+    fileprivate class func loadEducationInfo() -> [[InfoItem]] {
         var result: [[InfoItem]] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Education", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "Education", ofType: "plist")!)!
         
         for educationCategoryArray in arr as! [NSArray] {
             var localResult: [InfoItem] = []

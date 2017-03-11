@@ -9,7 +9,7 @@
 import Foundation
 
 class Interest {
-    private struct Keys {
+    fileprivate struct Keys {
         static var nameKey = "name"
         static var imageNameKey = "image_name"
         static var descriptionKey = "description"
@@ -29,12 +29,12 @@ class Interest {
 class InterestsParser {
     static var interests: [Interest] = InterestsParser.loadInterests()
     
-    private class func loadInterests() -> [Interest] {
+    fileprivate class func loadInterests() -> [Interest] {
         var result: [Interest] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Interests", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "Interests", ofType: "plist")!)!
         
         for dict in arr as! [NSDictionary] {
-            var entity = Interest(info: dict)
+            let entity = Interest(info: dict)
             result.append(entity)
         }
         

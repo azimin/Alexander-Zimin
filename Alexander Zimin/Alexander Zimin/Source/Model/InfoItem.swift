@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 enum URLType {
-    case None
-    case URL
-    case Email
+    case none
+    case url
+    case email
 }
 
 class InfoItem {
@@ -23,41 +23,41 @@ class InfoItem {
     func doAction() {
         var urlString = description
         
-        if type == .Email {
+        if type == .email {
             urlString = "mailto:" + urlString + "?subject=WWDC2015"
         }
         
-        let url = NSURL(string: urlString)
+        let url = URL(string: urlString)
         if let url = url {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
     
     var type: URLType {
         if !isURL {
-            return .None
+            return .none
         }
         
         if isValidEmail(description) {
-            return .Email
+            return .email
         }
         
-        return .URL
+        return .url
     }
     
     init(name: String, description: String) {
         self.name = name
         self.description = description
         
-        let candidateURL = NSURL(string: description)
+        let candidateURL = URL(string: description)
         if (candidateURL?.scheme != nil && candidateURL?.host != nil) || isValidEmail(description) {
             isURL = true
         }
     }
 }
 
-private func isValidEmail(testStr: String) -> Bool {
+private func isValidEmail(_ testStr: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
     let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-    return emailTest.evaluateWithObject(testStr)
+    return emailTest.evaluate(with: testStr)
 }

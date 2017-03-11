@@ -9,28 +9,28 @@
 import UIKit
 
 extension UIFont {
-    class func appUltraLightFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-UltraLight", size: size) ?? UIFont.systemFontOfSize(size)
+    class func appUltraLightFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-UltraLight", size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
-    class func appRegularFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Regular", size: size) ?? UIFont.systemFontOfSize(size)
+    class func appRegularFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
-    class func appMediumFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Medium", size: size) ?? UIFont.boldSystemFontOfSize(size)
+    class func appMediumFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Medium", size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
     
-    class func appHeavyFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Heavy", size: size) ?? UIFont.boldSystemFontOfSize(size)
+    class func appHeavyFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Heavy", size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
     
-    class func appBoldFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Bold", size: size) ?? UIFont.boldSystemFontOfSize(size)
+    class func appBoldFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Bold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
     
-    class func appDemiBoldFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-DemiBold", size: size) ?? UIFont.boldSystemFontOfSize(size)
+    class func appDemiBoldFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-DemiBold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
     
     class var appDefaultTextFontSize: CGFloat {

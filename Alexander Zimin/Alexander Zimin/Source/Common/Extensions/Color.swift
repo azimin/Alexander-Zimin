@@ -11,21 +11,21 @@ import UIKit
 let appColor = AZColor()
 
 class AZColor {
-    private(set) var contentColor = UIColor.colorWithHexString("000000")
+    fileprivate(set) var contentColor = UIColor.colorWithHexString("000000")
     
     func resetColor() {
        contentColor = UIColor.colorWithHexString("6F6F6F")
     }
     
-    func updateColor(color: UIColor) {
+    func updateColor(_ color: UIColor) {
         updateColor(color, isWithNotification: true)
     }
     
-    func updateColor(color: UIColor, isWithNotification: Bool) {
+    func updateColor(_ color: UIColor, isWithNotification: Bool) {
         contentColor = color
         
         if isWithNotification {
-            NSNotificationCenter.defaultCenter().postNotificationName(Constants.kAZNotificationColorChanged, object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kAZNotificationColorChanged), object: nil)
         }
     }
 }
@@ -62,7 +62,7 @@ extension UIColor {
     
     /** Example: info color */
     class var contentAdditionalElementsColor: UIColor {
-        return UIColor.blackColor().colorWithAlphaComponent(0.6)
+        return UIColor.black.withAlphaComponent(0.6)
     }
     
     class var contentSeperatorsColor: UIColor {
@@ -77,26 +77,49 @@ extension UIColor {
 
 // MARK: - From hex string
 extension UIColor {
-    class func colorWithHexString(hex: String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
-        
-        if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(advance(cString.startIndex, 1))
-        }
-        
-        if (count(cString) != 6) {
-            return UIColor.grayColor()
-        }
-        
-        var rString = cString.substringToIndex(advance(cString.startIndex, 2))
-        var gString = cString.substringFromIndex(advance(cString.startIndex, 2)).substringToIndex(advance(cString.startIndex, 2))
-        var bString = cString.substringFromIndex(advance(cString.startIndex, 4)).substringToIndex(advance(cString.startIndex, 2))
-        
-        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
-        NSScanner(string: rString).scanHexInt(&r)
-        NSScanner(string: gString).scanHexInt(&g)
-        NSScanner(string: bString).scanHexInt(&b)
-        
-        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1.0)
+    class func colorWithHexString(_ hex: String) -> UIColor {
+      var hex = hex
+
+      if hex.hasPrefix("#") {
+        hex = hex.substring(from: 1)
+      }
+
+      if hex.characters.count == 3 {
+        let redHex = hex.substring(with: 0..<1)
+        let greenHex = hex.substring(with: 1..<2)
+        let blueHex = hex.substring(with: 2..<3)
+
+        hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
+      }
+
+      let redHex = hex.substring(with: 0..<2)
+      let greenHex = hex.substring(with: 2..<4)
+      let blueHex = hex.substring(with: 4..<6)
+
+      var redInt: CUnsignedInt = 0
+      var greenInt: CUnsignedInt = 0
+      var blueInt: CUnsignedInt = 0
+
+      Scanner(string: redHex).scanHexInt32(&redInt)
+      Scanner(string: greenHex).scanHexInt32(&greenInt)
+      Scanner(string: blueHex).scanHexInt32(&blueInt)
+
+      return UIColor(red: CGFloat(redInt) / 255.0,
+                green: CGFloat(greenInt) / 255.0,
+                blue: CGFloat(blueInt) / 255.0,
+                alpha: 1.0)
     }
 }
+
+extension String {
+  func substring(from index: Int) -> String {
+    return self.substring(from: self.characters.index(self.startIndex, offsetBy: index))
+  }
+
+  func substring(with range: Range<Int>) -> String {
+    let startIndex = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
+    let endIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound)
+    return self.substring(with: startIndex..<endIndex)
+  }
+}
+

@@ -19,18 +19,18 @@ class BioViewController: BaseViewController {
         tableView.estimatedRowHeight = 128
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
-        tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
     }
 
 }
 // MARK: - UITableViewDataSource
 
 extension BioViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else {
@@ -38,21 +38,21 @@ extension BioViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            return tableView.dequeueReusableCellWithIdentifier("AvaCell", forIndexPath: indexPath) as! UITableViewCell
+            return tableView.dequeueReusableCell(withIdentifier: "AvaCell", for: indexPath) 
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
         
         let item = items[indexPath.row]
         
         if indexPath.row == 0 {
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
         } else if indexPath.row == items.count - 1 {
-            cell.roundedType = .BottomRounded
+            cell.roundedType = .bottomRounded
         } else {
-            cell.roundedType = .None
+            cell.roundedType = .none
         }
         
         cell.nameLabel.text = item.name
@@ -66,12 +66,12 @@ extension BioViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension BioViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let url = NSURL(string: items[indexPath.row].description)
+        let url = URL(string: items[indexPath.row].description)
         if let url = url {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
 }

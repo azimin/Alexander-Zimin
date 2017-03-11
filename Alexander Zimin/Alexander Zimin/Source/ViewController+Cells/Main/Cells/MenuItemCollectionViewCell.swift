@@ -11,7 +11,7 @@ import UIKit
 class MenuItemCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var iconImage: UIImageView!
-    var fillColor: UIColor = UIColor.lightGrayColor()
+    var fillColor: UIColor = UIColor.lightGray
     
     @IBOutlet weak var categoryNameLabel: UILabel! {
         didSet {
@@ -26,16 +26,16 @@ class MenuItemCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.borderWidth = 1.0
         
         self.selectedBackgroundView = UIView()
-        self.selectedBackgroundView.layer.cornerRadius = Apperance.defaultCornerRadius
-        self.selectedBackgroundView.layer.masksToBounds = true
+        self.selectedBackgroundView?.layer.cornerRadius = Apperance.defaultCornerRadius
+        self.selectedBackgroundView?.layer.masksToBounds = true
     }
     
-    func fillWithColor(color: UIColor) {
+    func fillWithColor(_ color: UIColor) {
         fillColor = color
         categoryNameLabel.textColor = color
         iconImage.image = iconImage.image?.imageWithColor(color)
         
-        self.contentView.layer.borderColor = color.CGColor
-        self.selectedBackgroundView.backgroundColor = color.colorWithAlphaComponent(0.6)
+        self.contentView.layer.borderColor = color.cgColor
+        self.selectedBackgroundView?.backgroundColor = color.withAlphaComponent(0.6)
     }
 }

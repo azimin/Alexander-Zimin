@@ -21,6 +21,6 @@ class ImageTableViewCell: RoundedTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.userInteractionEnabled = false
+        self.isUserInteractionEnabled = false
     }
 }

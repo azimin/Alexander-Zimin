@@ -20,8 +20,8 @@ class InterestsViewController: BaseViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
         
-        tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
-        tableView.registerNib(UINib(nibName: Constants.imageTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.imageTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.imageTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.imageTableViewCellIdentifier)
     }
 
 }
@@ -29,28 +29,28 @@ class InterestsViewController: BaseViewController {
 // MARK: - UITableViewDataSource
 
 extension InterestsViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return interests.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.imageTableViewCellIdentifier, forIndexPath: indexPath) as! ImageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.imageTableViewCellIdentifier, for: indexPath) as! ImageTableViewCell
             
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
             cell.nameLabel.text = interests[indexPath.section].name
             cell.iconImageView.image = UIImage(named: interests[indexPath.section].imageName)?.imageWithColor(UIColor.contentElementsColor)
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
             
-            cell.roundedType = .BottomRounded
+            cell.roundedType = .bottomRounded
             cell.nameLabel.text = "Personal"
             cell.infoDescription = interests[indexPath.section].description
             cell.selectionEnable = false
@@ -63,11 +63,11 @@ extension InterestsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension InterestsViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clear }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Apperance.defaultSpace
     }
 }

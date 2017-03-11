@@ -22,12 +22,12 @@ class ProjectsViewController: BaseViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         savedColor = appColor.contentColor
         appColor.resetColor()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         appColor.updateColor(savedColor)
     }
 }
@@ -35,7 +35,7 @@ class ProjectsViewController: BaseViewController {
 // MARK: - Constants
 
 extension ProjectsViewController {
-    private struct Constants {
+    fileprivate struct Constants {
         static let projectCellIdentifier = "ProjectCell"
         static let projectSegueIdentifier = "ShowProject"
     }
@@ -44,20 +44,20 @@ extension ProjectsViewController {
 // MARK: - UITableViewDataSource
 
 extension ProjectsViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return projects.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.projectCellIdentifier, forIndexPath: indexPath) as! ProjectTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.projectCellIdentifier, for: indexPath) as! ProjectTableViewCell
         
-        var project = projects[indexPath.section]
+        let project = projects[indexPath.section]
         
-        cell.roundedType = .AllRounded
+        cell.roundedType = .allRounded
         
         cell.isMacOS = project.isMacOs
         cell.appNameLabel.text = project.name
@@ -70,26 +70,26 @@ extension ProjectsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ProjectsViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clear }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Apperance.defaultSpace
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        performSegueWithIdentifier("ShowProject", sender: projects[indexPath.section])
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowProject", sender: projects[indexPath.section])
     }
 }
 
 // MARK: - Segue
 
 extension ProjectsViewController {
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.projectSegueIdentifier {
-            let controller = segue.destinationViewController as! ProjectViewController
+            let controller = segue.destination as! ProjectViewController
             controller.project = sender as! Project
         }
     }

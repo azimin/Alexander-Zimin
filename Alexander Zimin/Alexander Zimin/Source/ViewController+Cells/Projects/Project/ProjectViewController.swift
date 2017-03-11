@@ -16,7 +16,7 @@ class ProjectViewController: BaseViewController {
     var project: Project!
     var info: [InfoItem] = []
     var screenshotsNames: [String] = []
-    var screenShootSize: CGSize = CGSizeZero
+    var screenShootSize: CGSize = CGSize.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,11 @@ class ProjectViewController: BaseViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
-        tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
         
         info = project.additionalInfo
-        info.insert(InfoItem(name: "Platform", description: project.isMacOs ? "OS X" : "iOS"), atIndex: 0)
-        info.insert(InfoItem(name: "Name", description: project.name), atIndex: 0)
+        info.insert(InfoItem(name: "Platform", description: project.isMacOs ? "OS X" : "iOS"), at: 0)
+        info.insert(InfoItem(name: "Name", description: project.name), at: 0)
         
         screenshotsNames = project.screenshotsNames
         
@@ -44,36 +44,36 @@ class ProjectViewController: BaseViewController {
 // MARK: - UITableViewDataSource
 
 extension ProjectViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return screenshotsNames.count > 0 ? 2 : 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 && screenshotsNames.count > 0  {
             return 1
         }
         return info.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 && screenshotsNames.count > 0  {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ScreenshotsCell", forIndexPath: indexPath) as! ScreenshotsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ScreenshotsCell", for: indexPath) as! ScreenshotsTableViewCell
             cell.collectionViewHeightConstraint.constant = screenShootSize.height
             return cell
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
         
         if indexPath.row == 0 {
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
         } else if indexPath.row == info.count - 1 {
-            cell.roundedType = .BottomRounded
+            cell.roundedType = .bottomRounded
         } else {
-            cell.roundedType = .None
+            cell.roundedType = .none
         }
         
         if info.count == 1 {
-            cell.roundedType = .AllRounded
+            cell.roundedType = .allRounded
         }
         
         cell.nameLabel.text = info[indexPath.row].name
@@ -87,27 +87,27 @@ extension ProjectViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ProjectViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clear }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Apperance.defaultSpace
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         info[indexPath.row].doAction()
     }
 }
 
 extension ProjectViewController: UICollectionViewDataSource {
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return screenshotsNames.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScreenshotCell", forIndexPath: indexPath) as! ScreenshotCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ScreenshotCell", for: indexPath) as! ScreenshotCollectionViewCell
         
         cell.screenshotImageView.image = UIImage(named: screenshotsNames[indexPath.row])
         cell.needToShowFrame = project.isMacOs
@@ -117,7 +117,7 @@ extension ProjectViewController: UICollectionViewDataSource {
 }
 
 extension ProjectViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return screenShootSize
     }
 }

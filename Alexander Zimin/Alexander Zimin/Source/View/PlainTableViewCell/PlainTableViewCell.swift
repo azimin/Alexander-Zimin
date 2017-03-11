@@ -37,8 +37,8 @@ class PlainTableViewCell: RoundedTableViewCell {
     
     var selectionEnable: Bool = false {
         didSet {
-            userInteractionEnabled = selectionEnable
-            accessorizeImageView.hidden = !selectionEnable
+            isUserInteractionEnabled = selectionEnable
+            accessorizeImageView.isHidden = !selectionEnable
             
             if selectionEnable {
                 accessorizeRightConstraint.constant = 16
@@ -52,28 +52,28 @@ class PlainTableViewCell: RoundedTableViewCell {
         }
     }
     
-    private(set) var opened: Bool = false
+    fileprivate(set) var opened: Bool = false
     
-    func setOpened(opened: Bool, animated: Bool) {
+    func setOpened(_ opened: Bool, animated: Bool) {
         setOpened(opened, animated: animated, complition: nil)
     }
     
-    func setOpened(opened: Bool, animated: Bool, complition: (()->())?) {
+    func setOpened(_ opened: Bool, animated: Bool, complition: (()->())?) {
         self.opened = opened
         let duration = animated ? 0.25 : 0.0
         
-        UIView.animateWithDuration(duration, animations: { () -> Void in
+        UIView.animate(withDuration: duration, animations: { () -> Void in
             self.rotateAction(opened)
-        }) { (success) -> Void in
+        }, completion: { (success) -> Void in
             complition?()
-        }
+        }) 
     }
     
-    private func rotateAction(opened: Bool) {
+    fileprivate func rotateAction(_ opened: Bool) {
         if opened {
-            accessorizeImageView.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2));
+            accessorizeImageView.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2));
         } else {
-            accessorizeImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
+            accessorizeImageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2));
         }
     }
     

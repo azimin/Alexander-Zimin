@@ -40,8 +40,8 @@ class InfoTableViewCell: RoundedTableViewCell {
 
     var selectionEnable: Bool = false {
         didSet {
-            userInteractionEnabled = selectionEnable
-            accessorizeImageView.hidden = !selectionEnable
+            isUserInteractionEnabled = selectionEnable
+            accessorizeImageView.isHidden = !selectionEnable
             updateInfoDescriptionLabel()
             
             if selectionEnable {
@@ -58,7 +58,7 @@ class InfoTableViewCell: RoundedTableViewCell {
         let mutableString = NSMutableAttributedString(string: infoDescription)
         
         if selectionEnable {
-            mutableString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: NSMakeRange(0, mutableString.length))
+            mutableString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: NSMakeRange(0, mutableString.length))
         }
         
         infoDescriptionLabel.attributedText = mutableString

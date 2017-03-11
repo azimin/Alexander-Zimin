@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MenuItem {
-    private struct Keys {
+    fileprivate struct Keys {
         static var nameKey = "name"
         static var imageNameKey = "image_name"
         static var colorKey = "color"
@@ -33,12 +33,12 @@ class MenuItem {
 class MenuItemsParser {
     static var menuItems: [MenuItem] = MenuItemsParser.loadMenuItems()
     
-    private class func loadMenuItems() -> [MenuItem] {
+    fileprivate class func loadMenuItems() -> [MenuItem] {
         var result: [MenuItem] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("MenuItems", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "MenuItems", ofType: "plist")!)!
         
         for dict in arr as! [NSDictionary] {
-            var entity = MenuItem(info: dict)
+            let entity = MenuItem(info: dict)
             result.append(entity)
         }
         

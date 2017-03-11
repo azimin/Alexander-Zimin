@@ -19,10 +19,10 @@ class EducationViewController: BaseViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
-        tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
     }
 
-    func itemAtIndexPath(indexPath: NSIndexPath) -> InfoItem {
+    func itemAtIndexPath(_ indexPath: IndexPath) -> InfoItem {
         return items[indexPath.section][indexPath.row]
     }
 }
@@ -31,29 +31,29 @@ class EducationViewController: BaseViewController {
 // MARK: - UITableViewDataSource
 
 extension EducationViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items[section].count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
         
         let item = itemAtIndexPath(indexPath)
         
         if indexPath.row == 0 {
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
         } else if indexPath.row == items[indexPath.section].count - 1 {
-            cell.roundedType = .BottomRounded
+            cell.roundedType = .bottomRounded
         } else {
-            cell.roundedType = .None
+            cell.roundedType = .none
         }
         
         if items[indexPath.section].count == 1 {
-            cell.roundedType = .AllRounded
+            cell.roundedType = .allRounded
         }
         
         cell.nameLabel.text = item.name
@@ -67,20 +67,20 @@ extension EducationViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension EducationViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clear }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Apperance.defaultSpace
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let url = NSURL(string: items[indexPath.section][indexPath.row].description)
+        let url = URL(string: items[indexPath.section][indexPath.row].description)
         if let url = url {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     var screenSize: CGSize {
-        return UIScreen.mainScreen().bounds.size
+        return UIScreen.main.bounds.size
     }
 
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
 }

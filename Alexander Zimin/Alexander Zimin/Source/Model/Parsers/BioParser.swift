@@ -9,17 +9,17 @@
 import Foundation
 
 class BioParser {
-    private struct Keys {
+    fileprivate struct Keys {
         static var infoNameKey = "name"
         static var infoDescriptionKey = "description"
     }
     
     static var bioItems: [InfoItem] = BioParser.loadBioItems()
     
-    private class func loadBioItems() -> [InfoItem] {
+    fileprivate class func loadBioItems() -> [InfoItem] {
         var result: [InfoItem] = []
         
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Bio", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "Bio", ofType: "plist")!)!
         
         for additionalInfoItem in arr as! [NSDictionary] {
             let bioInfo = InfoItem(name: additionalInfoItem.parse(Keys.infoNameKey), description: additionalInfoItem.parse(Keys.infoDescriptionKey))

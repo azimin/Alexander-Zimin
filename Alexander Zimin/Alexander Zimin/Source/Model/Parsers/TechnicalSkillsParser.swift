@@ -9,7 +9,7 @@
 import Foundation
 
 class TechnicalSkill {
-    private struct Keys {
+    fileprivate struct Keys {
         static var nameKey = "name"
         static var descriptionKey = "description"
         static var skillsKey = "skills"
@@ -29,12 +29,12 @@ class TechnicalSkill {
 class TechnicalSkillParser {
     static var technicalSkills: [TechnicalSkill] = TechnicalSkillParser.loadTechnicalSkills()
     
-    private class func loadTechnicalSkills() -> [TechnicalSkill] {
+    fileprivate class func loadTechnicalSkills() -> [TechnicalSkill] {
         var result: [TechnicalSkill] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("TechnicalSkills", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "TechnicalSkills", ofType: "plist")!)!
         
         for dict in arr as! [NSDictionary] {
-            var entity = TechnicalSkill(info: dict)
+            let entity = TechnicalSkill(info: dict)
             result.append(entity)
         }
         

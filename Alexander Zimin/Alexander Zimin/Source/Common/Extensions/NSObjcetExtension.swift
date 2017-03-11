@@ -9,17 +9,17 @@
 import Foundation
 
 extension NSObject {
-    func fill<T>(action: (T!) -> ()) -> T! {
+    func fill<T>(_ action: (T!) -> ()) -> T! {
         return self as! T
     }
 }
 
 extension NSDictionary {
-    func parse<T>(key: String) -> T {
-        return self.objectForKey(key) as! T
+    func parse<T>(_ key: String) -> T {
+        return self.object(forKey: key) as! T
     }
     
-    func parse<T>(key: String, anotherValue: T) -> T {
-        return (self.objectForKey(key) as? T) ?? anotherValue
+    func parse<T>(_ key: String, anotherValue: T) -> T {
+        return (self.object(forKey: key) as? T) ?? anotherValue
     }
 }

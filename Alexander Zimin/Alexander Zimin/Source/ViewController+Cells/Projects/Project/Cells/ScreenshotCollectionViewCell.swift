@@ -12,7 +12,7 @@ class ScreenshotCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var screenshotImageView: UIImageView! {
         didSet {
-            screenshotImageView.layer.borderColor = UIColor.contentElementsColor.CGColor
+            screenshotImageView.layer.borderColor = UIColor.contentElementsColor.cgColor
             screenshotImageView.layer.cornerRadius = Apperance.defaultCornerRadius
             screenshotImageView.layer.masksToBounds = true
         }

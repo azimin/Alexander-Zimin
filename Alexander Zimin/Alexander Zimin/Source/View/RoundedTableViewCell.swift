@@ -9,12 +9,12 @@
 import UIKit
 
 enum RoundedType {
-    case None, TopRounded, BottomRounded, AllRounded
+    case none, topRounded, bottomRounded, allRounded
 }
 
 class RoundedTableViewCell: UITableViewCell {
     
-    var roundedType: RoundedType = .None {
+    var roundedType: RoundedType = .none {
         didSet {
             updateRoundShape()
         }
@@ -26,15 +26,15 @@ class RoundedTableViewCell: UITableViewCell {
         }
     }
     
-    private let shape: CAShapeLayer = CAShapeLayer()
-    private let selectionShape: CAShapeLayer = CAShapeLayer()
+    fileprivate let shape: CAShapeLayer = CAShapeLayer()
+    fileprivate let selectionShape: CAShapeLayer = CAShapeLayer()
     
     override func awakeFromNib() {
         self.layer.addSublayer(shape)
         
         self.selectedBackgroundView = UIView()
-        self.selectedBackgroundView.backgroundColor = UIColor.contentSeperatorsSelectionColor
-        self.selectedBackgroundView.layer.mask = selectionShape
+        self.selectedBackgroundView?.backgroundColor = UIColor.contentSeperatorsSelectionColor
+        self.selectedBackgroundView?.layer.mask = selectionShape
         
         self.contentView.layoutMargins.left += Apperance.defaultSpace
         self.contentView.layoutMargins.right += Apperance.defaultSpace
@@ -48,27 +48,27 @@ extension RoundedTableViewCell {
     func updateRoundShape() {
         var path: UIBezierPath
         
-        var frameSpace = CGRect(x: Apperance.defaultSpace, y: 0, width: self.frame.width - Apperance.defaultSpace * 2, height: self.frame.height)
+        let frameSpace = CGRect(x: Apperance.defaultSpace, y: 0, width: self.frame.width - Apperance.defaultSpace * 2, height: self.frame.height)
         path = UIBezierPath(roundedRect: frameSpace, byRoundingCorners: cornersType, cornerRadii: CGSize(width: Apperance.defaultCornerRadius, height: Apperance.defaultCornerRadius))
         
-        shape.path = path.CGPath
-        shape.fillColor = UIColor.clearColor().CGColor
-        shape.strokeColor = UIColor.contentSeperatorsColor.CGColor
+        shape.path = path.cgPath
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = UIColor.contentSeperatorsColor.cgColor
         
-        selectionShape.path = path.CGPath
-        selectionShape.fillColor = UIColor.contentSeperatorsSelectionColor.CGColor
+        selectionShape.path = path.cgPath
+        selectionShape.fillColor = UIColor.contentSeperatorsSelectionColor.cgColor
     }
     
-    private var cornersType: UIRectCorner {
+    fileprivate var cornersType: UIRectCorner {
         switch roundedType {
-        case .TopRounded:
-            return .TopLeft | .TopRight
-        case .BottomRounded:
-            return .BottomLeft | .BottomRight
-        case .AllRounded:
-            return .AllCorners
+        case .topRounded:
+            return [.topLeft, .topRight]
+        case .bottomRounded:
+            return [.bottomLeft, .bottomRight]
+        case .allRounded:
+            return .allCorners
         default:
-            return .allZeros
+            return []
         }
     }
 }

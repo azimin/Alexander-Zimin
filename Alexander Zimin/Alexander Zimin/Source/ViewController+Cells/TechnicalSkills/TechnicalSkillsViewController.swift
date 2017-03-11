@@ -22,17 +22,17 @@ class TechnicalSkillsViewController: BaseViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Apperance.defaultSpace, right: 0)
         
-        tableView.registerNib(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
-        tableView.registerNib(UINib(nibName: Constants.plainTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.plainTableViewCellIdentifier)
-        tableView.registerNib(UINib(nibName: "SpaceTableViewCell", bundle: nil), forCellReuseIdentifier: "SpaceTableViewCell")
+        tableView.register(UINib(nibName: Constants.infoTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCellIdentifier)
+        tableView.register(UINib(nibName: Constants.plainTableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.plainTableViewCellIdentifier)
+        tableView.register(UINib(nibName: "SpaceTableViewCell", bundle: nil), forCellReuseIdentifier: "SpaceTableViewCell")
     }
     
-    func numberOfElementsInSection(section: Int) -> Int {
+    func numberOfElementsInSection(_ section: Int) -> Int {
         return numberOfElementsInSection(section, mechOppened: false)
     }
     
-    func numberOfElementsInSection(section: Int, mechOppened: Bool) -> Int {
-        if find(oppenedCategories, section) != nil || mechOppened  {
+    func numberOfElementsInSection(_ section: Int, mechOppened: Bool) -> Int {
+        if oppenedCategories.index(of: section) != nil || mechOppened  {
             return technicalSkills[section].skills.count + 2
         }
         return 1
@@ -42,15 +42,15 @@ class TechnicalSkillsViewController: BaseViewController {
 // MARK: - UITableViewDataSource
 
 extension TechnicalSkillsViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return technicalSkills.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfElementsInSection(section)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: RoundedTableViewCell
         
         switch indexPath.row {
@@ -65,13 +65,13 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
         let numberOfElements = numberOfElementsInSection(indexPath.section)
         
         if numberOfElements == 1 {
-            cell.roundedType = .AllRounded
+            cell.roundedType = .allRounded
         } else if indexPath.row == 0 {
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
         } else if indexPath.row == numberOfElements - 1 {
-            cell.roundedType = .BottomRounded
+            cell.roundedType = .bottomRounded
         } else {
-            cell.roundedType = .None
+            cell.roundedType = .none
         }
         
         return cell
@@ -80,9 +80,9 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
 
 // MARK: - Cells
 
-extension TechnicalSkillsViewController: UITableViewDataSource {
-    func titleCell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> RoundedTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.plainTableViewCellIdentifier, forIndexPath: indexPath) as! PlainTableViewCell
+extension TechnicalSkillsViewController {
+    func titleCell(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> RoundedTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.plainTableViewCellIdentifier, for: indexPath) as! PlainTableViewCell
         
         cell.nameLabel.text = technicalSkills[indexPath.section].name
         cell.selectionEnable = true
@@ -90,8 +90,8 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
         return cell
     }
     
-    func acquiredCell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> RoundedTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.infoTableViewCellIdentifier, forIndexPath: indexPath) as! InfoTableViewCell
+    func acquiredCell(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> RoundedTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
         
         cell.selectionEnable = false
         cell.nameLabel.text = "Info"
@@ -100,8 +100,8 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
         return cell
     }
     
-    func skillCell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> RoundedTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.plainTableViewCellIdentifier, forIndexPath: indexPath) as! PlainTableViewCell
+    func skillCell(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> RoundedTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.plainTableViewCellIdentifier, for: indexPath) as! PlainTableViewCell
         
         cell.nameLabel.text = technicalSkills[indexPath.section].skills[indexPath.row - 2]
         cell.nameLabel.textColor = UIColor.contentAdditionalElementsColor
@@ -115,42 +115,42 @@ extension TechnicalSkillsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension TechnicalSkillsViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlainTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! PlainTableViewCell
         
         tableView.beginUpdates()
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        var indexPathes: [NSIndexPath] = []
+        var indexPathes: [IndexPath] = []
         for i in 1..<numberOfElementsInSection(indexPath.section, mechOppened: true) {
-            indexPathes.append(NSIndexPath(forRow: i, inSection: indexPath.section))
+            indexPathes.append(IndexPath(row: i, section: indexPath.section))
         }
         
-        if let index = find(oppenedCategories, indexPath.section) {
-            oppenedCategories.removeAtIndex(index)
-            tableView.deleteRowsAtIndexPaths(indexPathes, withRowAnimation: UITableViewRowAnimation.Fade)
+        if let index = oppenedCategories.index(of: indexPath.section) {
+            oppenedCategories.remove(at: index)
+            tableView.deleteRows(at: indexPathes, with: UITableViewRowAnimation.fade)
             
             cell.setOpened(false, animated: true, complition: { () -> () in
-                cell.roundedType = .AllRounded
+                cell.roundedType = .allRounded
             })
             
         } else {
             oppenedCategories.append(indexPath.section)
-            tableView.insertRowsAtIndexPaths(indexPathes, withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.insertRows(at: indexPathes, with: UITableViewRowAnimation.fade)
             
-            cell.roundedType = .TopRounded
+            cell.roundedType = .topRounded
             cell.setOpened(true, animated: true)
         }
         
         tableView.endUpdates()
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView().fill() { $0.backgroundColor = UIColor.clearColor() }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView().fill() { $0.backgroundColor = UIColor.clear }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return Apperance.defaultSpace
     }
 }

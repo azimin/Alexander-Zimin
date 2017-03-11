@@ -9,7 +9,7 @@
 import Foundation
 
 class Project {
-    private struct Keys {
+    fileprivate struct Keys {
         static var nameKey = "name"
         static var imageNameKey = "image_name"
         static var urlKey = "url"
@@ -35,24 +35,24 @@ class Project {
         isMacOs = info.parse(Keys.isMacOSKey, anotherValue: false)
         screenshotsNames = info.parse(Keys.screenshotsKey, anotherValue: [])
         
-        for additionalInfoItem in info.objectForKey(Keys.infoKey) as! [NSDictionary] {
+        for additionalInfoItem in info.object(forKey: Keys.infoKey) as! [NSDictionary] {
             let projectInfo = InfoItem(name: additionalInfoItem.parse(Keys.infoNameKey), description: additionalInfoItem.parse(Keys.infoDescriptionKey))
             additionalInfo.append(projectInfo)
         }
         
-        additionalInfo.insert(InfoItem(name: "URL", description: url), atIndex: 0)
+        additionalInfo.insert(InfoItem(name: "URL", description: url), at: 0)
     }
 }
 
 class ProjectsParser {
     static var projects: [Project] = ProjectsParser.loadProjects()
     
-    private class func loadProjects() -> [Project] {
+    fileprivate class func loadProjects() -> [Project] {
         var result: [Project] = []
-        var arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Projects", ofType: "plist")!)!
+        let arr = NSArray(contentsOfFile: Bundle.main.path(forResource: "Projects", ofType: "plist")!)!
         
         for dict in arr as! [NSDictionary] {
-            var entity = Project(info: dict)
+            let entity = Project(info: dict)
             result.append(entity)
         }
         
